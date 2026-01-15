@@ -1,0 +1,198 @@
+@use "sass:color";
+@use "variables" as *;
+
+.col3 {
+    width: 50%;
+    background-color: $secundary-color;
+    padding: 2rem 1.4rem 2rem 1.4rem;
+
+    .mail_header {
+        margin: .0 0 .5rem 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        position: relative;
+
+        .mail_issue {
+            margin: 0;
+            display: flex;
+            position: relative;
+            flex-flow: row wrap;
+            width: calc(100% - 20px);
+            align-items: center;
+
+            h1 {
+                display: inline-block;
+                overflow: hidden;
+                width: calc(100% - 25px);
+                word-break: keep-all;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            i {
+                cursor: pointer;
+                font-size: .95rem;
+                margin: 0 .4rem 0 0;
+                color: $background;
+            }
+        }
+
+        .mail_icons {
+            margin: 0;
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+
+            i {
+                color: color.adjust($secundary-color, $lightness: -35%);
+                background-color: $background;
+                border-radius: 3px 3px 3px 3px;
+                padding: .5rem;
+                font-size: .8rem;
+                margin: 0 0 0 .3rem;
+                cursor: pointer;
+
+                &:hover {
+                    color: $primary-color;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+
+    .mail_main {
+        .mail_top {
+            padding: 1.5rem 1rem 1.5rem 1rem;
+            margin: 0 0 1.6px 0;
+            width: 100%;
+            border-radius: 7px 7px 0px 0px;
+            background-color: $background;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            .info {
+                margin: 0;
+                display: flex;
+                align-items: center;
+
+                .profile_img {
+                    @include profile1;
+                    margin: 0;
+                }
+
+                .contact {
+                    margin: 0 0 0 .7rem;
+
+                    .name {
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            margin: 0 0 0 .4rem;
+                        }
+                    }
+
+                    .recipient {
+                        margin: .3rem 0 0 0;
+                    }
+                }
+            }
+
+            .date {
+                margin: 0;
+            }
+        }
+
+        .mail_content {
+            background-color: $background;
+            border-radius: 0px 0px 7px 7px;
+            padding: 3rem 3.5rem 3rem 4rem;
+            overflow: auto;
+            height: calc(100vh - 185px);
+            font-size: .9rem;
+            line-height: 1.35rem;
+
+            .mail_actions {
+                width: 100%;
+                display: flex;
+                flex-flow: row wrap;
+                margin: 5rem 0 0 0;
+                justify-content: flex-start;
+                font-size: .8rem;
+
+                .action {
+                    margin: 0 1rem 0 0;
+                    border: solid .5px $secundary-color;
+                    padding: .5rem .8rem .5rem .8rem;
+                    cursor: pointer;
+                    border-radius: 5px;
+
+                    i {
+                        margin: 0 .6rem 0 0;
+                    }
+
+                    &:hover {
+                        background-color: color.adjust($secundary-color, $lightness: 15%);
+                    }
+                }
+            }
+        }
+    }
+
+    .no_mail {
+        margin: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 10rem 0 0 0;
+
+        .nm_img {
+            margin: 0;
+            width: 50%;
+
+            svg {
+                path {
+                    fill: color.adjust($secundary-color, $lightness: 6%);
+                }
+            }
+        }
+
+        .nm_text {
+            margin: 0;
+            color: color.adjust($secundary-color, $lightness: -25%);
+            font-size: .8rem;
+        }
+    }
+}
+
+.error-msg {
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin: 10px;
+    text-align: center;
+}
+
+path .st0 {
+    fill: red;
+}
+
+.document {
+    margin: 0;
+    padding: .2rem;
+    width: 150px;
+    border: solid .5px $secundary-color;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+}
+
+.mail_content .document {
+    margin-top: 30px;
+}

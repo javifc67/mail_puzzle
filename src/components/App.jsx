@@ -17,7 +17,7 @@ export default function App() {
   const hasExecutedEscappValidation = useRef(false);
 
   const [loading, setLoading] = useState(true);
-  const [screen, setScreen] = useState(LOGIN_SCREEN);
+  const [screen, setScreen] = useState(MAIL_SCREEN);
   const prevScreen = useRef(screen);
   const [solved, setSolved] = useState(false);
   const [solvedTrigger, setSolvedTrigger] = useState(0);
@@ -96,9 +96,6 @@ export default function App() {
     if (typeof _appSettings !== "object") {
       _appSettings = {};
     }
-    if (typeof _appSettings.skin === "undefined" && typeof DEFAULT_APP_SETTINGS.skin === "string") {
-      _appSettings.skin = DEFAULT_APP_SETTINGS.skin;
-    }
 
     // Merge _appSettings with DEFAULT_APP_SETTINGS_SKIN to obtain final app settings
     _appSettings = Utils.deepMerge(DEFAULT_APP_SETTINGS, _appSettings);
@@ -171,7 +168,7 @@ export default function App() {
     {
       id: MAIL_SCREEN,
       content: (
-        <MailScreen solvePuzzle={solvePuzzle} solved={solved} solvedTrigger={solvedTrigger} />
+        <MailScreen setScreen={setScreen} />
       ),
     },
   ];
@@ -182,7 +179,7 @@ export default function App() {
       className={`${appSettings !== null && typeof appSettings.skin === "string" ? appSettings.skin.toLowerCase() : ""
         }`}
     >
-      {renderScreens(screens)}
+      {appSettings && renderScreens(screens)}
     </div>
   );
 }

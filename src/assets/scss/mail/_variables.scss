@@ -1,0 +1,50 @@
+@use "sass:color";
+
+/* --------- COLORS ---------*/
+$primary-color: #B31829;
+$secundary-color: #BCC8D1;
+$yellow: #FAFF00;
+$green: #1CD99C;
+$red: #e07979;
+$typecolor: #292F33;
+$contrast-color: #95D9C3;
+$background: white;
+$text: black;
+
+/* --------- TYPOGRAPHY ---------*/
+$typeface: 'Roboto', sans-serif;
+
+/* --------- MIXINS---------*/
+@mixin img {
+    img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@mixin profile1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+    }
+}
+
+@mixin profile2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+    }
+}

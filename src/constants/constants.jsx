@@ -1,4 +1,11 @@
+import { emails, chats } from "./mailDataExample.js";
 export const DEFAULT_APP_SETTINGS = {
+  emails,
+  chats,
+  name: "Víctor Lustig",
+  username: "victorl",
+  domain: "cerrajerosvl.es",
+  photo: "/images/avatar.png",
 };
 
 export const ESCAPP_CLIENT_SETTINGS = {
