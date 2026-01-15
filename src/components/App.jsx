@@ -2,15 +2,13 @@ import { useContext, useEffect, useRef, useState } from "react";
 import "./../assets/scss/app.scss";
 
 import {
-  ACTION_AFTER_SOLVE,
   DEFAULT_APP_SETTINGS,
   ESCAPP_CLIENT_SETTINGS,
   LOGIN_SCREEN,
-  MAIL_SCREEN,
-  THEME_ASSETS,
+  MAIL_SCREEN
 } from "../constants/constants.jsx";
 import { GlobalContext } from "./GlobalContext.jsx";
-import MainScreen from "./MainScreen.jsx";
+import MailScreen from "./MailScreen.jsx";
 
 export default function App() {
   const { escapp, setEscapp, appSettings, setAppSettings, Storage, setStorage, Utils, I18n } =
@@ -101,21 +99,11 @@ export default function App() {
       _appSettings.skin = DEFAULT_APP_SETTINGS.skin;
     }
 
-    let skinSettings = THEME_ASSETS[_appSettings.skin] || {};
-
-    let DEFAULT_APP_SETTINGS_SKIN = Utils.deepMerge(DEFAULT_APP_SETTINGS, skinSettings);
-
     // Merge _appSettings with DEFAULT_APP_SETTINGS_SKIN to obtain final app settings
-    _appSettings = Utils.deepMerge(DEFAULT_APP_SETTINGS_SKIN, _appSettings);
-
-    _appSettings.usernameRequired = _appSettings.usernameRequired === true || _appSettings.usernameRequired === "TRUE";
+    _appSettings = Utils.deepMerge(DEFAULT_APP_SETTINGS, _appSettings);
 
     //Init internacionalization module
     I18n.init(_appSettings);
-
-    if (typeof _appSettings.message !== "string") {
-      _appSettings.message = I18n.getTrans("i.message");
-    }
 
     //Change HTTP protocol to HTTPs in URLs if necessary
     _appSettings = Utils.checkUrlProtocols(_appSettings);
@@ -139,15 +127,11 @@ export default function App() {
       Utils.log("Check solution Escapp response", success, erState);
       if (success) {
         setSolved(true);
-        if (appSettings.actionAfterSolve === ACTION_AFTER_SOLVE.WEB) {
-          setScreen(WEB_SCREEN);
-        } else if (appSettings.actionAfterSolve === ACTION_AFTER_SOLVE.VIDEO) {
-          setScreen(END_SCREEN);
-        }
+        setScreen(MAIL_SCREEN);
         try {
           setTimeout(() => {
             submitPuzzleSolution(_solution);
-          }, 2000);
+          }, 1000);
         } catch (e) {
           Utils.log("Error in checkNextPuzzle", e);
         }
@@ -180,32 +164,13 @@ export default function App() {
     {
       id: LOGIN_SCREEN,
       content: (
-        <div
-          className="main-background"
-          style={{
-            backgroundImage: appSettings?.backgroundImg ? `url(${appSettings.backgroundImg})` : {},
-            height: " 100%",
-            width: "100%",
-          }}
-        >
-          <MainScreen solvePuzzle={solvePuzzle} solved={solved} solvedTrigger={solvedTrigger} />
-        </div>
+        <MailScreen solvePuzzle={solvePuzzle} solved={solved} solvedTrigger={solvedTrigger} />
       ),
     },
     {
       id: MAIL_SCREEN,
       content: (
-        <video
-          src={appSettings?.endScreenVideo}
-          autoPlay
-          loop
-          muted
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        />
+        <div></div>
       ),
     },
   ];
