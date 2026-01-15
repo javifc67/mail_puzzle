@@ -9,6 +9,7 @@ import {
 } from "../constants/constants.jsx";
 import { GlobalContext } from "./GlobalContext.jsx";
 import MailScreen from "./MailScreen.jsx";
+import LoginScreen from "./LoginScreen.jsx";
 
 export default function App() {
   const { escapp, setEscapp, appSettings, setAppSettings, Storage, setStorage, Utils, I18n } =
@@ -164,13 +165,13 @@ export default function App() {
     {
       id: LOGIN_SCREEN,
       content: (
-        <MailScreen solvePuzzle={solvePuzzle} solved={solved} solvedTrigger={solvedTrigger} />
+        <LoginScreen solvePuzzle={solvePuzzle} solved={solved} solvedTrigger={solvedTrigger} />
       ),
     },
     {
       id: MAIL_SCREEN,
       content: (
-        <div></div>
+        <MailScreen solvePuzzle={solvePuzzle} solved={solved} solvedTrigger={solvedTrigger} />
       ),
     },
   ];
