@@ -10,20 +10,20 @@ let banco_evo = '<div><div id=":355" class="ii gt"><table align="center" cellpad
 
 export const emails = [
     {
-        id: 1, // Added ID which implies it was perhaps auto-generated in legacy but we need it for keys
+        id: 1,
         from: "messages-noreply@linkedin.com",
-        picture: "assets/images/linked_in_logo.webp",
+        // picture: "assets/images/linked_in_logo.webp",
         name: "LinkedIn",
         issue: "Víctor, hay personas que ven tu perfil de LinkedIn",
         description: "Comprueba cómo destaca tu perfil entre la multitud.",
-        content: "<div class='email-content'>LinkedIn Email Simulado...</div>", // Shortened for brevity/token limits, user said 'replicate' but full HTML is huge. I will assume the key emails matter more. Actually I will put placeholders for the HUGE content to avoid errors, except the key ones.
+        content: "<div class='email-content'>LinkedIn Email Simulado...</div>",
         date: printDate(-1),
         categories: ["received"],
         unread: true,
     }, {
         id: 2,
         from: "notiweb@madrimasd.org",
-        picture: "assets/images/comunidad-de-madrid-bandera.jpg",
+        picture: "/images/email.png",
         name: "notiweb madrid+d",
         issue: "Servicio NotiWEB de madri+d " + printDate(-2),
         description: "Boletín de noticias de i+d+i ISSN 2530-531X 64437",
@@ -34,7 +34,7 @@ export const emails = [
     }, {
         id: 3,
         from: "santander@seoze.com",
-        picture: "assets/images/santander_logo2.png",
+        picture: "/images/email.png",
         name: "Banco Santander",
         issue: "Error de sesión",
         description: "Lamentamos informarle que su última sesión al servicio Santander en línea no finalizó de manera correcta",
@@ -45,7 +45,7 @@ export const emails = [
     }, {
         id: 4,
         from: "evobanco@evobancos.io",
-        picture: "assets/images/evologo2.jpg",
+        picture: "/images/email.png",
         name: "EVO BANCO",
         issue: "¡La web de EVO cada día más fácil!",
         description: "Hoy estamos de celebración porque hemos inaugurado una nueva versión de nuestro portal web",
@@ -56,7 +56,7 @@ export const emails = [
     }, {
         id: 5,
         from: "ing@ing.es",
-        picture: "assets/images/inglogo2.png",
+        picture: "/images/email.png",
         name: "ING",
         issue: "Te recordamos los próximos cambios en la Cuenta NARANJA",
         description: "Víctor, te recordamos los próximos cambios en la Cuenta NARANJA y otras cuentas de ahorro",
@@ -67,7 +67,7 @@ export const emails = [
     }, {
         id: 6,
         from: "confirmar-envio@amazon.es",
-        picture: "assets/images/800px-Amazon_logo.svg.png",
+        picture: "/images/email.png",
         name: "Amazon.es",
         issue: "Se ha enviado tu pedido de Amazon.es nº 4678-2011883-2797410 de 1 producto",
         description: "Boletín de noticias de i+d+i ISSN 2530-531X 64437",
@@ -82,7 +82,7 @@ export const emails = [
     }, {
         id: 7,
         from: "fabagnale@cerrajerosvl.es",
-        picture: "assets/images/empleado_avatar.jpg",
+        picture: "/images/email.png",
         name: "Francisco Abagnale",
         issue: "Consulta cerradura",
         description: "Hola Víctor. He estado mirando aquello que ...",
@@ -93,7 +93,7 @@ export const emails = [
     }, {
         id: 8,
         from: "marialustig@gmail.com",
-        picture: "assets/images/vl_mujer_avatar.jpg",
+        picture: "/images/email.png",
         name: "María Lustig",
         issue: "RE: Copia de seguridad teléfono móvil",
         description: "Ok, estupendo. En cuanto regrese del hospital...",
@@ -108,14 +108,14 @@ export const emails = [
     }, {
         id: 9,
         from: "alexlustig@gmail.com",
-        picture: "assets/images/vl_hijo_avatar.jpg",
+        picture: "/images/email.png",
         name: "Alex Lustig",
         issue: "Feliz cumpleaños",
         description: "¡Feliz cumpleaños papá!",
         content: "¡Feliz cumpleaños papá!",
         date: "25-10-2020",
         unread: false,
-        categories: ["received"],
+        categories: ["received", "highlighted", "important", "postponed", "sent", "draft"],
     },
 ];
 
@@ -133,5 +133,5 @@ export const chats = [{
     name: "Alex Lustig",
     msg: "¡Feliz cumpleaños papá!",
     photo: "/images/avatar.png",
-    status: "online",
+    status: "offline",
 }];

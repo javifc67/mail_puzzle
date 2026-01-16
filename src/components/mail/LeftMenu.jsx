@@ -2,7 +2,7 @@ import Categories from './Categories';
 import ChatContact from './ChatContact';
 import "../../assets/scss/mail/LeftMenu.scss";
 
-export default function LeftMenu({ config = {}, chats, selectedCategory, getUnreadEmailsFromCategory, selectCategory, close }) {
+export default function LeftMenu({ config = {}, chats, selectedCategory, getUnreadEmailsFromCategory, selectCategory, close, I18n }) {
     const { name, username, domain, photo } = config;
 
     return (
@@ -16,7 +16,7 @@ export default function LeftMenu({ config = {}, chats, selectedCategory, getUnre
                 <div className="picture1"><img src={photo} alt={name} /></div>
                 <div className="user_info">
                     <div className="name1">
-                        <h2>{name}</h2><i className="fas fa-chevron-down" style={{ visibility: "hidden" }} />
+                        <h2>{name}</h2>
                     </div>
                     <div className="mail1">{`${username}@${domain}`}</div>
                 </div>
@@ -26,6 +26,7 @@ export default function LeftMenu({ config = {}, chats, selectedCategory, getUnre
                 selectedCategory={selectedCategory}
                 getUnreadEmailsFromCategory={getUnreadEmailsFromCategory}
                 selectCategory={selectCategory}
+                I18n={I18n}
             />
 
             <div className="contacts">

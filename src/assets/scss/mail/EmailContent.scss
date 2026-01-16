@@ -16,10 +16,8 @@
         .mail_issue {
             margin: 0;
             display: flex;
-            position: relative;
-            flex-flow: row wrap;
             width: calc(100% - 20px);
-            align-items: center;
+            align-items: baseline;
 
             h1 {
                 display: inline-block;
@@ -30,35 +28,10 @@
                 text-overflow: ellipsis;
             }
 
-            i {
+            img {
+                height: 15px;
+                width: 15px;
                 cursor: pointer;
-                font-size: .95rem;
-                margin: 0 .4rem 0 0;
-                color: $background;
-            }
-        }
-
-        .mail_icons {
-            margin: 0;
-            flex: 1;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: flex-end;
-
-            i {
-                color: color.adjust($secundary-color, $lightness: -35%);
-                background-color: $background;
-                border-radius: 3px 3px 3px 3px;
-                padding: .5rem;
-                font-size: .8rem;
-                margin: 0 0 0 .3rem;
-                cursor: pointer;
-
-                &:hover {
-                    color: $primary-color;
-                    transition: .3s;
-                }
             }
         }
     }
@@ -116,30 +89,6 @@
             font-size: .9rem;
             line-height: 1.35rem;
 
-            .mail_actions {
-                width: 100%;
-                display: flex;
-                flex-flow: row wrap;
-                margin: 5rem 0 0 0;
-                justify-content: flex-start;
-                font-size: .8rem;
-
-                .action {
-                    margin: 0 1rem 0 0;
-                    border: solid .5px $secundary-color;
-                    padding: .5rem .8rem .5rem .8rem;
-                    cursor: pointer;
-                    border-radius: 5px;
-
-                    i {
-                        margin: 0 .6rem 0 0;
-                    }
-
-                    &:hover {
-                        background-color: color.adjust($secundary-color, $lightness: 15%);
-                    }
-                }
-            }
         }
     }
 

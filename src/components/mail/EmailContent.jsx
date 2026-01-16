@@ -1,5 +1,5 @@
 import "../../assets/scss/mail/EmailContent.scss";
-export default function EmailContent({ email, highlightEmail }) {
+export default function EmailContent({ config, email, highlightEmail, I18n }) {
 
     if (!email) {
         return (
@@ -13,7 +13,7 @@ export default function EmailContent({ email, highlightEmail }) {
                             />
                         </svg>
                     </div>
-                    <div className="nm_text">No has seleccionado ningún correo</div>
+                    <div className="nm_text">{I18n.getTrans("i.noEmailSelected")}</div>
                 </div>
             </div>
         );
@@ -25,34 +25,26 @@ export default function EmailContent({ email, highlightEmail }) {
         <div className="col3">
             <div className="mail_header">
                 <div className="mail_issue">
-                    <span>
-                        <i
-                            className={`${isHighlighted ? "fas" : "far"} fa-star`}
-                            onClick={() => highlightEmail(email.id)}
-                        />
-                    </span>
+                    <img
+                        src={isHighlighted ? '/images/star.png' : '/images/star_empty.png'}
+                        onClick={(e) => { e.stopPropagation(); highlightEmail(email.id); }}
+                    />
                     <h1>{email.issue}</h1>
-                </div>
-                <div className="mail_icons" style={{ visibility: "hidden" }}>
-                    <i className="far fa-clock" />
-                    <i className="far fa-trash-alt" />
-                    <i className="far fa-bookmark" />
-                    <i className="fas fa-inbox" />
                 </div>
             </div>
 
             <div className="mail_main">
                 <div className="mail_top">
                     <div className="info">
-                        <div className="profile_img">
+                        {email.picture && <div className="profile_img">
                             <img src={email.picture} alt="" />
-                        </div>
+                        </div>}
                         <div className="contact">
                             <div className="name">
                                 <h2>{email.name}</h2><span>&#60;{email.from}&#62;</span>
                             </div>
                             <div className="recipient">
-                                Para: {config.username + "@" + config.domain}
+                                {I18n.getTrans("i.to")} {config.username + "@" + config.domain}
                             </div>
                         </div>
                     </div>
@@ -68,10 +60,6 @@ export default function EmailContent({ email, highlightEmail }) {
                             </div>
                         </a>
                     )}
-                    <div className="mail_actions" style={{ visibility: "hidden" }}>
-                        <div className="action"><span><i className="fas fa-reply" /></span>Responder</div>
-                        <div className="action"><span><i className="fas fa-share" /></span>Reenviar</div>
-                    </div>
                 </div>
             </div>
         </div>

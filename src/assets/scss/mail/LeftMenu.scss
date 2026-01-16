@@ -5,7 +5,7 @@
     width: 20%;
     padding: 1rem .5rem 0 0;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     border-right: solid 1.2px color.adjust($secundary-color, $lightness: 6%);
     justify-content: flex-start;
     gap: 40px;
@@ -115,6 +115,10 @@
         height: 270px;
         padding: 1rem;
         margin-bottom: 1rem;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
 
         .contact {
             display: flex;

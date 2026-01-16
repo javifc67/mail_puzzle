@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import "../../assets/scss/mail/EmailList.scss";
 
-export default function EmailList({ selectedEmail, emails, selectEmail, highlightEmail }) {
+export default function EmailList({ selectedEmail, emails, selectEmail, highlightEmail, I18n }) {
     const [searchText, setSearchText] = useState("");
 
     const match = (email, term) => {
@@ -13,17 +13,13 @@ export default function EmailList({ selectedEmail, emails, selectEmail, highligh
     return (
         <div className="col2">
             <div className="col2_top">
-                <div className="searchbar" style={{ visibility: "visible" }}>
+                <div className="searchbar" >
                     <input
                         type="text"
-                        placeholder="Buscar..."
+                        placeholder={I18n.getTrans("i.search")}
                         onChange={(e) => setSearchText(e.target.value)}
                         value={searchText}
                     />
-                </div>
-                <div className="icons" style={{ display: "none" }}>
-                    <i className="fas fa-sync-alt" />
-                    <i className="far fa-trash-alt" />
                 </div>
             </div>
             <div className="email_list">
@@ -45,9 +41,8 @@ export default function EmailList({ selectedEmail, emails, selectEmail, highligh
                                 </div>
                                 <div className="email_main">
                                     <div className="email_actions">
-                                        <i className="far fa-square" />
-                                        <i
-                                            className={`${isHighlighted ? "fas" : "far"} fa-star`}
+                                        <img
+                                            src={isHighlighted ? '/images/star.png' : '/images/star_empty.png'}
                                             onClick={(e) => { e.stopPropagation(); highlightEmail(email.id); }}
                                         />
                                     </div>

@@ -1,13 +1,14 @@
+import { MAIL_CATEGORIES } from '../../constants/constants';
 import Category from './Category';
 
-export default function Categories({ selectedCategory, getUnreadEmailsFromCategory, selectCategory }) {
+export default function Categories({ selectedCategory, getUnreadEmailsFromCategory, selectCategory, I18n }) {
     const categoryData = [
-        { id: "received", title: "Recibidos", icon: "/images/inbox.png" },
-        { id: "highlighted", title: "Destacados", icon: "/images/star.png" },
-        { id: "important", title: "Pospuestos", icon: "/images/clock.png" },
-        { id: "postponed", title: "Importantes", icon: "/images/important.png" },
-        { id: "sent", title: "Enviados", icon: "/images/sent.png" },
-        { id: "draft", title: "Borradores", icon: "/images/document.png" }
+        { id: MAIL_CATEGORIES.RECEIVED, title: I18n.getTrans("i.categories.received"), icon: "/images/inbox.png" },
+        { id: MAIL_CATEGORIES.HIGHLIGHTED, title: I18n.getTrans("i.categories.highlighted"), icon: "/images/star.png" },
+        { id: MAIL_CATEGORIES.IMPORTANT, title: I18n.getTrans("i.categories.important"), icon: "/images/clock.png" },
+        { id: MAIL_CATEGORIES.POSTPONED, title: I18n.getTrans("i.categories.postponed"), icon: "/images/important.png" },
+        { id: MAIL_CATEGORIES.SENT, title: I18n.getTrans("i.categories.sent"), icon: "/images/sent.png" },
+        { id: MAIL_CATEGORIES.DRAFT, title: I18n.getTrans("i.categories.draft"), icon: "/images/document.png" }
     ];
 
     return (

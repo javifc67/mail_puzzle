@@ -7,7 +7,7 @@ import "./../assets/scss/MailScreen.scss";
 import { LOGIN_SCREEN } from "../constants/constants.jsx";
 
 export default function MailScreen({ setScreen }) {
-  const { appSettings: config } = useContext(GlobalContext);
+  const { appSettings: config, I18n } = useContext(GlobalContext);
 
   // State
   const [emails, setEmails] = useState(config.emails);
@@ -71,17 +71,20 @@ export default function MailScreen({ setScreen }) {
         getUnreadEmailsFromCategory={getUnreadEmailsFromCategory}
         selectCategory={setSelectedCategory}
         close={handleClose}
+        I18n={I18n}
       />
       <EmailList
         emails={currentEmails}
         selectedEmail={selectedEmail}
         selectEmail={handleSelectEmail}
         highlightEmail={handleHighlightEmail}
+        I18n={I18n}
       />
       <EmailContent
         config={config}
         email={selectedEmail}
         highlightEmail={handleHighlightEmail}
+        I18n={I18n}
       />
     </div>
   );

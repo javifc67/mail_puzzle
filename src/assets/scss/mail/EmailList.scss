@@ -16,25 +16,10 @@
             margin: 1rem 0 0 0;
 
             input {
+                background-color: $background;
+                color: $text;
                 width: 80%;
                 padding: .4rem 1rem .4rem 1rem;
-            }
-        }
-
-        .icons {
-            width: 100%;
-            padding: 1.7rem 0 0 1.5rem;
-
-            i {
-                margin: 0 .4rem 0 0;
-                padding: .5rem;
-                border-radius: 50%;
-                font-size: .8rem;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: color.adjust($secundary-color, $lightness: 13%);
-                }
             }
         }
     }
@@ -78,23 +63,26 @@
             }
 
             .email_main {
-                display: flex;
-                flex-flow: row wrap;
                 margin: .9rem 0 0 0;
                 color: $typecolor;
+                display: flex;
+                gap: 10px;
 
                 .email_actions {
-                    width: 12%;
+                    margin: 0;
                     display: flex;
                     color: color.adjust($typecolor, $lightness: 60%);
 
-                    i {
-                        font-size: .8rem;
+                    img {
+                        height: 15px;
+                        width: 15px;
+                        cursor: pointer;
                     }
                 }
 
                 .email_content {
                     width: 80%;
+                    margin: 0;
 
                     .issue {
                         font-size: .8rem;
