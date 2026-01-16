@@ -17,7 +17,7 @@ export default function App() {
   const hasExecutedEscappValidation = useRef(false);
 
   const [loading, setLoading] = useState(true);
-  const [screen, setScreen] = useState(MAIL_SCREEN);
+  const [screen, setScreen] = useState(LOGIN_SCREEN);
   const prevScreen = useRef(screen);
   const [solved, setSolved] = useState(false);
   const [solvedTrigger, setSolvedTrigger] = useState(0);
