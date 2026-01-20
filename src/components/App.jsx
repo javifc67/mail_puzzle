@@ -102,7 +102,10 @@ export default function App() {
 
   function loadStorageData() {
     const storedEmails = Storage.getSetting("emails");
-    if (!Array.isArray(storedEmails)) return;
+    if (!Array.isArray(storedEmails) || storedEmails.length !== appSettings.emails.length) {
+      Storage.removeSetting("emails");
+      return;
+    }
 
     setAppSettings((prevSettings) => {
       const configEmails = prevSettings.emails;
@@ -111,7 +114,6 @@ export default function App() {
       for (const ce of configEmails) {
         const storedEmail = storedEmails.find((se) => se.id === ce.id);
         if (storedEmail) {
-          //ignores highlighted category
           const cleanCats = (cats) => (cats || []).filter((c) => c !== "highlighted").sort();
 
           isMatch =
@@ -130,6 +132,10 @@ export default function App() {
             Storage.removeSetting("emails");
             return prevSettings;
           }
+        } else {
+          Utils.log("Email not found in stored emails. Invalidating storage and using settings data.");
+          Storage.removeSetting("emails");
+          return prevSettings;
         }
       }
       Utils.log("Email content match detected. Using stored data.");
