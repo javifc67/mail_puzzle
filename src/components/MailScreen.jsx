@@ -7,10 +7,15 @@ import "./../assets/scss/MailScreen.scss";
 import { LOGIN_SCREEN } from "../constants/constants.jsx";
 
 export default function MailScreen({ setScreen }) {
-  const { appSettings: config, I18n } = useContext(GlobalContext);
+  const { appSettings: config, I18n, Storage } = useContext(GlobalContext);
 
   // State
   const [emails, setEmails] = useState(config.emails);
+
+  useEffect(() => {
+    setEmails(config.emails);
+  }, [config.emails]);
+
   const [selectedEmailId, setSelectedEmailId] = useState(undefined);
   const [selectedCategory, setSelectedCategory] = useState("received");
 
@@ -23,13 +28,18 @@ export default function MailScreen({ setScreen }) {
     return emails.filter(email => email.categories.includes(category) && email.unread);
   };
 
+  const updateEmails = (emails) => {
+    setEmails(emails);
+    Storage.saveSetting("emails", emails);
+  };
+
   // Handlers
   const handleSelectEmail = (id) => {
     const emailIndex = emails.findIndex(e => e.id === id);
     if (emailIndex !== -1) {
       const newEmails = [...emails];
       newEmails[emailIndex] = { ...newEmails[emailIndex], unread: false };
-      setEmails(newEmails);
+      updateEmails(newEmails);
       setSelectedEmailId(id);
     }
   };
@@ -50,7 +60,7 @@ export default function MailScreen({ setScreen }) {
 
       email.categories = categories;
       newEmails[emailIndex] = email;
-      setEmails(newEmails);
+      updateEmails(newEmails);
     }
   };
 

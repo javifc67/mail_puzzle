@@ -89,7 +89,52 @@ export default function App() {
 
   function restoreAppState(erState) {
     Utils.log("Restore application state based on escape room state:", erState);
+    if (!Storage.getSetting("emails")) Storage.saveSetting("emails", appSettings.emails);
+    if (escapp.getAllPuzzlesSolved()) {
+      const _solution = escapp.getLastSolution();
+      if (_solution) {
+        setSolved(true);
+        setScreen(MAIL_SCREEN);
+        loadStorageData();
+      }
+    }
+  }
 
+  function loadStorageData() {
+    const storedEmails = Storage.getSetting("emails");
+    if (!Array.isArray(storedEmails)) return;
+
+    setAppSettings((prevSettings) => {
+      const configEmails = prevSettings.emails;
+      let isMatch = true;
+
+      for (const ce of configEmails) {
+        const storedEmail = storedEmails.find((se) => se.id === ce.id);
+        if (storedEmail) {
+          //ignores highlighted category
+          const cleanCats = (cats) => (cats || []).filter((c) => c !== "highlighted").sort();
+
+          isMatch =
+            ce.from === storedEmail.from &&
+            ce.name === storedEmail.name &&
+            ce.issue === storedEmail.issue &&
+            ce.description === storedEmail.description &&
+            ce.content === storedEmail.content &&
+            ce.date === storedEmail.date &&
+            ce.picture === storedEmail.picture &&
+            JSON.stringify(ce.attachment) === JSON.stringify(storedEmail.attachment) &&
+            JSON.stringify(cleanCats(ce.categories)) === JSON.stringify(cleanCats(storedEmail.categories));
+
+          if (!isMatch) {
+            Utils.log("Email content mismatch detected. Invalidating storage and using settings data.");
+            Storage.removeSetting("emails");
+            return prevSettings;
+          }
+        }
+      }
+      Utils.log("Email content match detected. Using stored data.");
+      return { ...prevSettings, emails: storedEmails };
+    });
   }
 
   function processAppSettings(_appSettings) {
