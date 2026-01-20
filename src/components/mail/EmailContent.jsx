@@ -1,4 +1,5 @@
 import "../../assets/scss/mail/EmailContent.scss";
+import EmailContentBody from "./EmailContentBody";
 export default function EmailContent({ config, email, highlightEmail, I18n }) {
 
     if (!email) {
@@ -51,15 +52,7 @@ export default function EmailContent({ config, email, highlightEmail, I18n }) {
                     <div className="date">{email.date}</div>
                 </div>
                 <div className="mail_content" >
-                    <div dangerouslySetInnerHTML={{ __html: email.content }} />
-                    {email.attachment && (
-                        <a href={email.attachment.url} rel="noopener noreferrer" target="_blank">
-                            <div className="document">
-                                <div className="fa fa-file" />
-                                <div className="name">{email.attachment.title}</div>
-                            </div>
-                        </a>
-                    )}
+                    <EmailContentBody content={email.content} attachment={email.attachment} I18n={I18n} />
                 </div>
             </div>
         </div>

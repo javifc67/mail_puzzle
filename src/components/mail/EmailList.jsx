@@ -52,7 +52,7 @@ export default function EmailList({ selectedEmail, emails, selectEmail, highligh
                                         <div className="documents">
                                             {email.attachment && (
                                                 <div className="document">
-                                                    <div className="fa fa-file" />
+                                                    <img src="/images/document.png" alt={email.attachment.title} />
                                                     <div className="name">{email.attachment.title}</div>
                                                 </div>
                                             )}

@@ -83,11 +83,30 @@
         .mail_content {
             background-color: $background;
             border-radius: 0px 0px 7px 7px;
-            padding: 3rem 3.5rem 3rem 4rem;
+            padding: 1rem 2.5rem 2rem 2.5rem;
             overflow: auto;
             height: calc(100vh - 185px);
             font-size: .9rem;
             line-height: 1.35rem;
+
+            .mail_content_body {
+
+                div.body {
+                    margin: 1rem;
+
+                    .body_img {
+                        display: flex;
+                        height: 100px;
+                    }
+                }
+
+                .response {
+                    border-left: 2px solid $response-color;
+                    color: $response-color;
+                    padding: 1rem;
+                    background-color: rgb(223, 223, 223);
+                }
+            }
 
         }
     }
@@ -130,16 +149,30 @@ path .st0 {
 }
 
 .document {
-    margin: 0;
-    padding: .2rem;
-    width: 150px;
+
     border: solid .5px $secundary-color;
+    margin: 0;
+    padding: 7px 14px;
+    width: fit-content;
     border-radius: 20px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
     color: black;
+    justify-content: flex-start;
+    gap: 5px;
+
+    img {
+        height: 20px;
+        width: 20px;
+        object-fit: contain;
+        object-position: center;
+        margin: 0;
+    }
+
+    div.name {
+        margin: 0;
+    }
 }
 
 .mail_content .document {

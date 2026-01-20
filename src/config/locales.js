@@ -16,6 +16,8 @@ export let LOCALES = {
     "i.categories.postponed": "Important",
     "i.categories.sent": "Sent",
     "i.categories.draft": "Drafts",
+    "i.response.1": "On",
+    "i.response.2": "wrote",
   },
   es: {
     "i.pass": "Olvidé mi contraseña",
@@ -34,6 +36,8 @@ export let LOCALES = {
     "i.categories.postponed": "Importantes",
     "i.categories.sent": "Enviados",
     "i.categories.draft": "Borradores",
+    "i.response.1": "El",
+    "i.response.2": "escribió",
   },
   sr: {
     "i.pass": "I forgot my password",
@@ -52,5 +56,7 @@ export let LOCALES = {
     "i.categories.postponed": "Important",
     "i.categories.sent": "Sent",
     "i.categories.draft": "Drafts",
+    "i.response.1": "On",
+    "i.response.2": "wrote",
   },
 };
