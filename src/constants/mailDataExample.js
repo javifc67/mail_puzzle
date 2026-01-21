@@ -1,186 +1,214 @@
 import { printDate } from '../utils/dateUtils.js';
 
-let reBody = "<div><p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\"><span style=\"color: black; font-size: 10pt; font-family: Verdana, sans-serif, serif, EmojiFont;\">Hola,</span></p></div><div><p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\"><span style=\"color: black; font-size: 10pt; font-family: Verdana, sans-serif, serif, EmojiFont;\">&nbsp;</span></p></div><div><p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\"><span style=\"color: black; font-size: 10pt; font-family: Verdana, sans-serif, serif, EmojiFont;\">He realizado una copia de seguridad de los datos de tu m\xF3vil, como me pediste. La he subido a la nube, la puedes descargar <a href=\"".concat("http://vishub.org/pictures/18977.jpg", "\" target=\"_blank\">aqu\xED</a>. El archivo está protegido por contraseña. Le he puesto de contraseña el nombre de nuestro banco + 1970.</span></p></div>\n<div><p>&nbsp;</p><p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\"><span style=\"color: black; font-size: 10pt; font-family: Verdana, sans-serif, serif, EmojiFont;\">Un saludo,</span></p>\n<p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\"><span style=\"color: black; font-size: 10pt; font-family: Verdana, sans-serif, serif, EmojiFont;\">Víctor</span></p></div>");
-let re = "<div><div class=\"_3BmoemBQrW75KEdNQC41p4\" style=\"margin:40px;\">Mensaje original <br/><div class=\"_1Q-fvRCccBUEINLSjMA_Z0\"></div><div class=\"_5jiwfFFFxaJYoBxxPvuJ\"><div><div class=\"zFv7kKAowni_2Yi-6MTFK YFtQ2HcVd7qxiOXuKcekC allowTextSelection\"><div><div><div lang=\"es\" link=\"#0563C1\" vlink=\"#954F72\"><div><div><div style=\"padding:3pt 0 0 0;border-style:solid none none none;border-top-width:1pt;border-top-color:#E1E1E1;\"><p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\"><b>De:</b> Víctor Lustig &lt;victorl@cerrajerosvl.es&gt; <br><b>Enviado el:</b> ".concat("viernes 4 de diciembre de 2020 12:27", "<br><b>Para:</b> María Lustig &lt;marialustig@gmail.com&gt;<br><b>Asunto: </b>Copia de seguridad</p></div></div><p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\">&nbsp;</p>\n") + reBody + "</div></div></div></div></div><div class=\"_2z5xkAz1EmiyFQkr_2BTmv\"></div></div><div class=\"_2R_t4-TN4UznfuRfuAfcQz\"></div></div></div></div>";
+const reBody = "<div><p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\"><span style=\"color: black; font-size: 10pt; font-family: Verdana, sans-serif;\">Hola,</span></p></div><div><p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\"><span style=\"color: black; font-size: 10pt; font-family: Verdana, sans-serif;\">&nbsp;</span></p></div><div><p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\"><span style=\"color: black; font-size: 10pt; font-family: Verdana, sans-serif;\">He realizado el volcado de los logs de desinformación del servidor de la UPM para el proyecto ENDGAME, como me pediste. Los he subido a la nube, los puedes descargar <a href=\"http://vishub.org/pictures/18977.jpg\" target=\"_blank\">aquí</a>. El archivo está protegido por contraseña. Le he puesto de contraseña el acrónimo del proyecto en mayúsculas seguido del año de este curso (2026).</span></p></div>\n<div><p>&nbsp;</p><p style=\"font-size:11pt;font-family:Calibri,sans-serif;margin:0;\"><span style=\"color: black; font-size: 10pt; font-family: Verdana, sans-serif;\">Un saludo,<br>Dr. Arnaldo<br>Lab. Ciberseguridad UPM</span></p></div>";
 
-let banco_ing_date = printDate(+15, 'dddd DD [de] MMMM [de] YYYY');
-let banco_ing = '<div bgcolor="#f1f1f1" style="font-family:arial;color:#333333;padding:0;line-height:1.4"> <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%;margin:0;padding:0;max-width:100%!important;table-layout:fixed"> <tbody><tr> <td valign="top"> </td> </tr> <tr> <td valign="top"> </td> </tr> </tbody></table> <span style="display:none;font-size:1px;color:#ffffff;line-height:1px;font-family:arial;max-height:0px;max-width:0px;opacity:0;overflow:hidden" class="m_-2245769170232929980oculto">Información sobre la Cuenta NARANJA y otras cuentas de ahorro</span> <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="m_-2245769170232929980ancho" style="margin:0 auto">  <tbody><tr style="background-color:#ffffff;"> <td style="padding:0px"> <a href="https://ing.es" border="0" target="_blank"><img src="assets/images/inglogo.png" width="100" height="auto" border="0" align="left" class="CToWUd"></a> </td> </tr>  <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 0px" align="left" valign="top"> <h1 style="margin:20px 0px 0px 0px;color:#ff6200;line-height:1.16"> <span style="font-weight:300">Víctor, te recordamos los próximos cambios en la Cuenta NARANJA y otras cuentas de ahorro</span> </h1> <br> <span style="font-family:arial;color:#333333">Estimado Víctor:</span> </td> </tr> <tr> <td bgcolor="#ffffff" height="20" colspan="3">&nbsp;</td> </tr> <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 0px" align="left" valign="top"> <span style="font-family:arial;color:#333333">Hace unos meses comunicamos que, como consecuencia del entorno de tipos de interés bajos que atravesamos desde hace unos años, el próximo <strong>' + banco_ing_date + ' introduciremos algunos cambios en nuestra Cuenta NARANJA</strong> (así como en otras cuentas de ahorro<sup style="font-size:11px;line-height:10px">1</sup>).</span> </td> </tr> <tr> <td bgcolor="#ffffff" height="20" colspan="3">&nbsp;</td> </tr> <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 0px" align="left" valign="top"> <span style="font-family:arial;color:#333333">Como novedad, a partir de esta fecha empezaremos a aplicar en ellas una comisión de custodia de saldos de 10 € al mes. Comisión que no aplicará a quienes, como tú, tienen a día de hoy y mantengan en el futuro un saldo medio mensual<sup style="font-size:11px;line-height:10px">2</sup> inferior a 30.000 € o a quienes dispongan de una Cuenta NÓMINA (o Cuenta SIN NÓMINA) con ingresos recurrentes.</span> </td> </tr> <tr> <td bgcolor="#ffffff" height="20" colspan="3">&nbsp;</td> </tr> <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 5px 32px" align="left" valign="top"> <span style="font-family:arial;color:#333333">En cuanto a su remuneración, pasa a ser una ventaja exclusiva para aquellos clientes que tienen ingresos mensuales en su Cuenta NÓMINA o SIN NÓMINA. Ya sea a través de su nómina, pensión o prestación por desempleo; o a través de ingresos desde otro banco de, al menos, 700 € al mes.</span> <br><br> </td> </tr> <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 0px" align="left" valign="top"> <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" style="border-top:1px solid #ff6200!important"> <tbody> <tr> <td style="color:#ff6200"><strong>&nbsp;</strong></td> </tr>  </tbody> </table> </td> </tr>  <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 0" align="left" valign="top"> <span style="font-family:arial;color:#333333">De esta forma, con abrir una Cuenta NÓMINA (no tiene comisiones para tu día a día) y tener tu nómina, pensión o prestación por desempleo en ella, podrás seguir disfrutando de tu Cuenta NARANJA sin comisiones (independientemente de su saldo) y con su remuneración actual.</span> </td> </tr> <tr> <td bgcolor="#ffffff" height="20" colspan="3">&nbsp;</td> </tr> <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 0" align="left" valign="top"> <span style="font-family:arial;color:#333333">Y si no tienes nómina, no pasa nada. Con tener ingresos de otro banco de, al menos, 700 € al mes en tu Cuenta NÓMINA (o Cuenta SIN NÓMINA), también seguirás disfrutando de tu cuenta de ahorro como hasta ahora.</span> <br><br> </td> </tr> <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 0px" align="left" valign="top"> <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0" style="border-top:1px solid #ff6200!important"> <tbody> <tr> <td style="color:#ff6200"><strong>&nbsp;</strong></td> </tr>  </tbody> </table> </td> </tr> <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 0px" align="left" valign="top"> <span style="font-family:arial;color:#333333"></span> </td> </tr> <tr> <td bgcolor="#ffffff" height="20" colspan="3">&nbsp;</td> </tr> <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 0px" align="left" valign="top"> <span style="font-family:arial;color:#333333">Víctor, <strong>ya sabes que aquí eres siempre libre de elegir.</strong> Nada nos gustaría más que seguir contando contigo, pero puede que no estés de acuerdo con estos últimos cambios. En ese caso, tienes la posibilidad de cerrar tu cuenta en un clic y sin ningún tipo de coste en nuestra web o app (Configurar &gt; Cancelar cuenta) antes del próximo ' + printDate(+90, 'DD [de] MMMM [de] YYYY') + '. Si no lo haces antes de esta fecha, entenderemos que conoces y aceptas estas nuevas condiciones.</span> </td> </tr> <tr> <td bgcolor="#ffffff" height="20" colspan="3">&nbsp;</td> </tr> <tr bgcolor="#ffffff"> <td width="100%" style="padding:0px 32px 5px 32px" align="left" valign="top"> En cualquier caso, decidas lo que decidas, queremos darte de nuevo las gracias por elegirnos como tu banco. <br><br> Atentamente, <br><span style="color:#ff6200">El equipo de <span class="il">ING</span></span><br><br> </td> </tr> <tr> <td bgcolor="#ebebeb" style="padding:25px 30px;font-family:verdana;font-size:9px;line-height:normal;color:#555555"><sup>1</sup>Esta comisión se aplicará a las siguientes cuentas: Cuenta NARANJA, Cuenta NARANJA Mini, Cuenta Vivienda NARANJA, Cuenta NARANJA Vivienda, Cuenta Impuestos Cero, Cuenta Ahorro Fiscal y Cuenta Ahorro. También les aplicará, en su caso, el cese de la remuneración. <br><br> <sup>2</sup>El saldo medio mensual se calcula sumando el saldo de cada uno de los días de un mismo mes a las 00:00 horas y dividiendo esta cantidad total entre el número de días que tiene ese mes. <br><br> IMPORTANTE: No respondas a este correo, la dirección desde la que se ha enviado no está habilitada para recibir mensajes. Recuerda que <span class="il">ING</span> nunca te enviará por correo electrónico solicitud alguna para que informes de tus datos personales ni de tus claves. </td> </tr> </tbody></table> </div>';
-let banco_santander = '<div><div id=":355" class="ii gt"><table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font:13px/1.5 arial,sans-serif;width:auto"><tbody><tr><td><table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font:13px/1.5 arial,sans-serif;width:100%"><tbody><tr><td align="center" style="padding:32px 0"><a href="https://www.bancosantander.es" style="color:#303ab2" target="_blank"><img src="assets/images/santander_logo.png" style="border:none;display:block;width:150px" class="CToWUd"></a></td></tr></tbody></table><table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font:13px/1.5 arial,sans-serif;width:100%"><tbody><tr><td style="border:1px solid #dddddd;padding:16px"><table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font:13px/1.5 arial,sans-serif;width:100%"><tbody><tr><td>Lamentamos informarle que su última sesión al servicio Santander en línea no finalizó de manera correcta, asi que por su seguridad le pedimos que termine la sesión de inmediato.<br><br> Para evitar que su acceso sea manejado por personas ajenas a usted, vamos a proceder urgentemente a cambiar su contraseña de acceso. <b>Para ello, debe enviarnos lo antes posible su contraseña actual respondiendo a este correo </b>. <br><br> Ante cualquier consulta puede contactarnos a nuestro servicio de atención al cliente, teléfono 902 18 2020 disponible las 24 horas del día, o a través de nuestra página web <a href="https://www.bancosantander.es" target="_blank">https://www.bancosantander.es</a>. <br><br> Saluda atentamente,<br> el equipo del Banco Santander</td></tr></tbody></table></td></tr></tbody></table></div></div></div></div>';
-let banco_evo = '<div><div id=":355" class="ii gt"><table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font:13px/1.5 arial,sans-serif;width:auto"><tbody><tr><td><table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font:13px/1.5 arial,sans-serif;width:100%"><tbody><tr><td align="center" style="padding:32px 0"><a href="https://www.evobanco.com" style="color:#303ab2" target="_blank"><img src="assets/images/evologo.jpg" style="border:none;display:block;width:150px" class="CToWUd"></a></td></tr></tbody></table><table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font:13px/1.5 arial,sans-serif;width:100%"><tbody><tr><td style="border:1px solid #dddddd;padding:16px"><table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font:13px/1.5 arial,sans-serif;width:100%"><tbody><tr><td> Hoy estamos de celebración porque hemos inaugurado una nueva versión de nuestro portal web <a target="_blank" href="https://www.evobanco.com/">https://www.evobanco.com</a>. <br><br>Además, hemos introducido algunos cambios en nuestra política de seguridad para hacer el acceso a sus cuentas todavía más seguro, tanto desde la App de EVO (disponible para <a target="_blank" href="https://play.google.com/store/apps/details?id=es.evobanco.bancamovil&hl=es">Android</a> e <a target="_blank" href="https://apps.apple.com/es/app/evo-banco-movil/id542752481">iOS</a>) como desde el portal web. <br><br>Como consecuencia de esta nueva política de seguridad, debemos activar en su cuenta la autenticación en dos pasos. Para ello, debe respondernos a este correo electrónico con su actual contraseña y su número de teléfono. <br><br> Si tiene cualquier duda puede contactarnos a nuestro servicio de atención al cliente, teléfono 910 90 09 00 disponible de lunes a viernes de 9:00 a 14:00h, o a través de nuestra página web <a href="https://www.evobanco.com/" target="_blank">https://www.evobanco.com/</a>. <br><br> Hasta pronto,<br> tu banca inteligente. </td></tr></tbody></table></td></tr></tbody></table></div></div></div></div>';
+const malditaHtml = `<div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0;">
+    <div style="background-color: #000; padding: 20px; text-align: center;">
+        <h1 style="color: #fff; margin: 0; letter-spacing: 2px;">MALDITA.ES</h1>
+        <p style="color: #ff4d4d; margin: 5px 0 0; font-weight: bold; text-transform: uppercase; font-size: 12px;">Periodismo para que no te la cuelen</p>
+    </div>
+    <div style="padding: 30px; background-color: #fff;">
+        <h2 style="color: #d90000; margin-top: 0; border-bottom: 2px solid #d90000; padding-bottom: 10px;">🚨 ALERTA: Campaña de Desinformación</h2>
+        <p style="font-size: 16px; line-height: 1.5;">Hola equipo,</p>
+        <p style="font-size: 16px; line-height: 1.5;">Nuestros analistas han detectado una <strong>campaña de desinformación activa</strong> dirigida específicamente a estudiantes de la UPM.</p>
+        <div style="background-color: #ffe6e6; border-left: 5px solid #d90000; padding: 15px; margin: 20px 0;">
+            <p style="margin: 0; font-weight: bold; color: #d90000;">⚠️ Patrón Detectado</p>
+            <p style="margin: 5px 0 0;">Hemos rastreado el origen a una red de <em>perfiles falsos coordinados</em> en la red social X.</p>
+        </div>
+        <p style="font-size: 16px; line-height: 1.5;">¿Podéis procesar estos datos con el algoritmo de <strong>ENDGAME</strong> para ver si el módulo de gamificación los identifica correctamente?</p>
+        <div style="margin-top: 30px; text-align: center;">
+            <a target="_blank" href="https://maldita.es/nosotros/20250425/endgame-juego-contra-desinformacion/" style="background-color: #000; color: #fff; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 4px;">VER INFORME DE BOTS</a>
+        </div>
+        <p style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; color: #666;">Saludos,<br>El equipo de Maldita.</p>
+    </div>
+</div>`;
 
-export const emails = [{
-    id: 1,
-    from: "alexlustig@gmail.com",
-    picture: "/images/email.png",
-    name: "Alex Lustig",
-    issue: "Feliz cumpleaños",
-    description: "¡Feliz cumpleaños papá!",
-    content: {
-        html: "",
-        body: [
-            "¡Feliz cumpleaños papá!",
-            "Disfruta de tu cumpleaños.",
-            "Un abrazo.",
-        ],
-        img: "/images/email.png",
-        response: {
-            date: "25-10-2020",
-            from: "alexlustig@gmail.com",
-            name: "Alex Lustig",
-            attachment: {
-                title: "CopiaSegMovil2.zip",
-                url: "http://vishub.org/pictures/18977.jpg",
-            },
-            content: {
-                html: banco_ing,
-                body: [
-                    "¡Feliz cumpleaños papá!",
-                    "Disfruta de tu cumpleaños.",
-                    "Un abrazo.",
-                ],
-                img: "/images/email.png",
+const upmHtml = `<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #000; max-width: 700px; margin: 0 auto; background-color: #fff;">
+    <div style="border-bottom: 2px solid #0099d0; padding-bottom: 15px; margin-bottom: 30px; display: flex; align-items: center;">
+        <img src="https://www.upm.es/gsfs/SFS24596" alt="UPM Logo" style="height: 80px; margin-right: 20px;">
+        <div style="border-left: 1px solid #ccc; padding-left: 20px;">
+            <h2 style="margin: 0; color: #0099d0; font-weight: normal;">RECTORADO</h2>
+            <p style="margin: 5px 0 0; font-size: 12px; color: #666;">Universidad Politécnica de Madrid</p>
+        </div>
+    </div>
+    
+    <div style="padding: 0 20px;">
+        <p style="text-align: right; color: #666; font-size: 14px; margin-bottom: 40px;">Madrid, 21 de Enero de 2026</p>
+        
+        <div style="background-color: #f8f9fa; padding: 20px; border-radius: 4px; margin-bottom: 30px;">
+            <p style="margin: 0; font-weight: bold;">ASUNTO: Liberación de Fondos - Proyecto ENDGAME (H2020)</p>
+        </div>
 
-                response: {
-                    date: "25-10-2020",
-                    from: "alexlustig@gmail.com",
-                    name: "Alex Lustig",
-                    attachment: {
-                        title: "CopiaSegMovil3.zip",
-                        url: "http://vishub.org/pictures/18977.jpg",
-                    },
-                    content: {
-                        html: "",
-                        body: [
-                            "¡Feliz cumpleaños papá!",
-                            "Disfruta de tu cumpleaños.",
-                            "Un abrazo.",
-                        ],
-                        img: "/images/email.png",
-                    },
-                },
-            },
-        },
-    },
-    date: "25-10-2020",
-    unread: false,
-    attachment: {
-        title: "CopiaSegMovil.zip",
-        url: "http://vishub.org/pictures/18977.jpg",
-    },
-    categories: ["received", "highlighted", "important", "postponed", "sent", "draft"],
-},
-{
-    id: 2,
-    from: "messages-noreply@linkedin.com",
-    // picture: "assets/images/linked_in_logo.webp",
-    name: "LinkedIn",
-    issue: "Víctor, hay personas que ven tu perfil de LinkedIn",
-    description: "Comprueba cómo destaca tu perfil entre la multitud.",
-    content: { html: "\n    <div><div class=\"_17Jc6QO1QjTKmo_3K8hSZn YFtQ2HcVd7qxiOXuKcekC allowTextSelection\"><div><style type=\"text/css\">\n<!--\n  @media all and (max-width:590px) { } @media all and (-webkit-min-device-pixel-ratio:1.5) { } -->\n  </style>\n  <div class=\"rps_3a79\"><div style=\"background-color:#dfdfdf; padding:0; margin:0 auto; width:100%\"><span style=\"visibility:hidden; color:transparent; display:none!important; width:0; font-size:1px; opacity:0; height:0\"><span style=\"display:none; max-width:0; max-height:0; overflow:hidden; font-size:0\">Comprueba c\xF3mo destaca tu perfil entre la multitud.</span></span><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" bgcolor=\"#dfdfdf\" style=\"background-color:#dfdfdf; font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"1\" bgcolor=\"#dfdfdf\" style=\"background-color:#dfdfdf; font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:5px; font-size:5px; line-height:5px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td><table cellspacing=\"0\" cellpadding=\"0\" border=\"0\" align=\"center\" width=\"100%\" style=\"table-layout:fixed; font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td align=\"center\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"550\" class=\"x_responsive\" style=\"font-family:Helvetica,Arial,sans-serif; min-width:290px\"><tbody><tr><td align=\"left\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td align=\"center\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"520\" class=\"x_responsive-logo\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:7px; font-size:7px; line-height:7px\">&nbsp; </div></td></tr></tbody></table><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" bgcolor=\"#DFDFDF\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:8px; font-size:8px; line-height:8px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td align=\"left\" valign=\"middle\" width=\"95\" height=\"21\" id=\"x_base-header-logo\"><a href=\"https://www.linkedin.com\" target=\"_blank\" rel=\"noopener noreferrer\" data-auth=\"NotApplicable\" style=\"text-decoration:none; border:none; display:block; height:21px; width:100%\"><img data-imagetype=\"External\" src=\"assets/images/linked_in_logo_v2.png\" width=\"95\" height=\"21\" alt=\"LinkedIn\" style=\"border:none; text-decoration:none\"></a></td></tr></tbody></table></td></tr></tbody></table><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:8px; font-size:8px; line-height:8px\">&nbsp; </div></td></tr></tbody></table><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:12px; font-size:12px; line-height:12px\">&nbsp; </div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" bgcolor=\"#ffffff\" class=\"x_responsive-body\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"x_res-height10\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:50px; font-size:50px; line-height:50px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td align=\"center\" class=\"x_responsive-headline\" style=\"font-size:24px; line-height:24px; color:#0077b5\">La importancia de tu perfil</td></tr><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:13px; font-size:13px; line-height:13px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td align=\"center\" class=\"x_responsive-headline\" style=\"font-size:16px; line-height:16px\">Comprueba c\xF3mo destaca tu perfil entre la multitud.</td></tr><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:40px; font-size:40px; line-height:40px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td align=\"center\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"500\" class=\"x_responsive-wvmp\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr align=\"center\"><td width=\"200\" class=\"x_responsive-wvmp-circle\" dir=\"ltr\"><a href=\"https://www.linkedin.com/\" target=\"_blank\" rel=\"noopener noreferrer\" data-auth=\"NotApplicable\" style=\"text-decoration:none\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" dir=\"ltr\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td width=\"21\"><table width=\"21\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:0px; font-size:0px; line-height:0px\">&nbsp; </div></td></tr></tbody></table></td><td width=\"158\"><img data-imagetype=\"External\" src=\"assets/images/linked_in_circle.png\" width=\"158\" height=\"46\" style=\"border:none; text-decoration:none; display:block\"></td><td width=\"21\"><table width=\"21\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:0px; font-size:0px; line-height:0px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td rowspan=\"2\"><img data-imagetype=\"External\" src=\"assets/images/linked_in_circle_2.png\" width=\"21\" height=\"94\" style=\"border:none; text-decoration:none; display:block\"></td><td align=\"center\" valign=\"top\" height=\"72\" bgcolor=\"#68c7ec\" style=\"font-size:60px; line-height:64px; max-width:158px\"><a href=\"https://www.linkedin.com/\" target=\"_blank\" rel=\"noopener noreferrer\" data-auth=\"NotApplicable\" style=\"color:#ffffff; text-decoration:none\">157</a></td><td rowspan=\"2\"><img data-imagetype=\"External\" src=\"assets/images/linked_in_circle_4.png\" width=\"21\" height=\"94\" style=\"border:none; text-decoration:none; display:block\"></td></tr><tr><td align=\"center\" valign=\"bottom\" height=\"22\" bgcolor=\"#68c7ec\" style=\"font-size:16px; line-height:22px\"><a href=\"https://www.linkedin.com\" target=\"_blank\" rel=\"noopener noreferrer\" data-auth=\"NotApplicable\" style=\"color:#ffffff; text-decoration:none\">visualizaciones</a></td></tr><tr><td><table width=\"21\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:0px; font-size:0px; line-height:0px\">&nbsp; </div></td></tr></tbody></table></td><td><img data-imagetype=\"External\" src=\"assets/images/linked_in_circle_3.png\" width=\"158\" height=\"46\" style=\"border:none; text-decoration:none; display:block\"></td><td><table width=\"21\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:0px; font-size:0px; line-height:0px\">&nbsp; </div></td></tr></tbody></table></td></tr></tbody></table></a></td><td width=\"32\" class=\"x_responsive-wvmp-spacer\"><table width=\"32\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:18px; font-size:18px; line-height:18px\">&nbsp; </div></td></tr></tbody></table></td><td align=\"left\" width=\"268\" class=\"x_responsive-wvmp-text\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td style=\"font-size:20px; color:#4c4c4c\">Si la persona adecuada ve tu perfil, estar\xE1s un poco m\xE1s cerca del pr\xF3ximo paso en tu carrera.</td></tr><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:18px; font-size:18px; line-height:18px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"auto\" height=\"36\" class=\"x_responsive-wvmp-cta\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><a href=\"https://www.linkedin.com/\" target=\"_blank\" rel=\"noopener noreferrer\" data-auth=\"NotApplicable\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"auto\" height=\"36\" bgcolor=\"#0177b5\" class=\"x_responsive-wvmp-cta\" style=\"border-radius:4px; font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td width=\"15\" rowspan=\"3\"><table width=\"15\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" class=\"x_responsive-wvmp-cta\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:0px; font-size:0px; line-height:0px\">&nbsp; </div></td></tr></tbody></table></td><td height=\"10\"><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" class=\"x_responsive-wvmp-cta\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:8px; font-size:8px; line-height:8px\">&nbsp; </div></td></tr></tbody></table></td><td width=\"15\" rowspan=\"3\"><table width=\"15\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" class=\"x_responsive-wvmp-cta\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:0px; font-size:0px; line-height:0px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td height=\"16\"><a href=\"https://www.linkedin.com/\" target=\"_blank\" rel=\"noopener noreferrer\" data-auth=\"NotApplicable\" style=\"font-size:14px; text-decoration:none; color:#ffffff; display:inline-block\">\xBFQui\xE9n est\xE1 viendo tu perfil?</a></td></tr><tr><td height=\"10\"><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" class=\"x_responsive-wvmp-cta\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:8px; font-size:8px; line-height:8px\">&nbsp; </div></td></tr></tbody></table></td></tr></tbody></table></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:55px; font-size:55px; line-height:55px\">&nbsp; </div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td align=\"left\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" class=\"x_responsive\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:10px; font-size:10px; line-height:10px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td align=\"center\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"color:#999999; font-size:11px; font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td align=\"center\" dir=\"ltr\">\xA9 2020 <span data-markjs=\"true\" class=\"mark6rqa7nfju\" data-ogac=\"\" data-ogab=\"\" data-ogsc=\"\" data-ogsb=\"\"  >LinkedIn</span> Ireland Unlimited Company. <span data-markjs=\"true\" class=\"mark6rqa7nfju\" data-ogac=\"\" data-ogab=\"\" data-ogsc=\"\" data-ogsb=\"\"  >LinkedIn</span>, el logotipo de <span data-markjs=\"true\" class=\"mark6rqa7nfju\" data-ogac=\"\" data-ogab=\"\" data-ogsc=\"\" data-ogsb=\"\"  >LinkedIn</span> e InMail son marcas registradas de <span data-markjs=\"true\" class=\"mark6rqa7nfju\" data-ogac=\"\" data-ogab=\"\" data-ogsc=\"\" data-ogsb=\"\"  >LinkedIn</span> Corporation en Estados Unidos y en otros pa\xEDses. Todos los derechos reservados.</td></tr><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:10px; font-size:10px; line-height:10px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td align=\"center\">Est\xE1s recibiendo mensajes sobre Extracto de identidad profesional. <a href=\"https://www.linkedin.com/\" target=\"_blank\" rel=\"noopener noreferrer\" data-auth=\"NotApplicable\" style=\"color:#0077B5; text-decoration:none\">Date de baja</a>.</td></tr><tr><td align=\"center\"></td></tr><tr><td align=\"center\">Este mensaje de correo electr\xF3nico estaba dirigido a Víctor Lustig. <a href=\"https://www.linkedin.com \" target=\"_blank\" rel=\"noopener noreferrer\" data-auth=\"NotApplicable\" style=\"color:#0077B5; text-decoration:none\">Averigua por qu\xE9 incluimos esto.</a></td></tr><tr><td align=\"center\">Si necesitas ayuda o tienes alguna pregunta, ponte en contacto con el <a href=\"https://www.linkedin.com/\" target=\"_blank\" rel=\"noopener noreferrer\" data-auth=\"NotApplicable\" style=\"color:#0077B5; text-decoration:none\">Servicio de atenci\xF3n al cliente de <span data-markjs=\"true\" class=\"mark6rqa7nfju\" data-ogac=\"\" data-ogab=\"\" data-ogsc=\"\" data-ogsb=\"\"  >LinkedIn</span></a>.</td></tr><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:10px; font-size:10px; line-height:10px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td align=\"center\" dir=\"ltr\"><span data-markjs=\"true\" class=\"mark6rqa7nfju\" data-ogac=\"\" data-ogab=\"\" data-ogsc=\"\" data-ogsb=\"\"  >LinkedIn</span> es un nombre comercial registrado de <span data-markjs=\"true\" class=\"mark6rqa7nfju\" data-ogac=\"\" data-ogab=\"\" data-ogsc=\"\" data-ogsb=\"\"  >LinkedIn</span> Ireland Unlimited Company.</td></tr><tr><td align=\"center\" dir=\"ltr\">Registrado en Irlanda como sociedad privada de responsabilidad ilimitada, n\xFAmero de identificaci\xF3n 477441.</td></tr><tr><td align=\"center\" dir=\"ltr\">Oficina registrada: Wilton Plaza, Wilton Place, Dubl\xEDn 2, Irlanda</td></tr><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:10px; font-size:10px; line-height:10px\">&nbsp; </div></td></tr></tbody></table></td></tr><tr><td align=\"center\"></td></tr><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:10px; font-size:10px; line-height:10px\">&nbsp; </div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:20px; font-size:20px; line-height:20px\">&nbsp; </div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td><table width=\"1\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-family:Helvetica,Arial,sans-serif\"><tbody><tr><td><div style=\"height:20px; font-size:20px; line-height:20px\">&nbsp; </div></td></tr></tbody></table></td></tr></tbody></table></div></div></div></div><div class=\"_2z5xkAz1EmiyFQkr_2BTmv\"></div></div>\n      \n    " },
-    date: printDate(-1),
-    categories: ["received"],
-    unread: true,
-}, {
-    id: 3,
-    from: "notiweb@madrimasd.org",
-    picture: "/images/email.png",
-    name: "notiweb madrid+d",
-    issue: "Servicio NotiWEB de madri+d " + printDate(-2),
-    description: "Boletín de noticias de i+d+i ISSN 2530-531X 64437",
-    content: { html: "<div class=\"csic_boletin_wrapper\"><div align=\"center\"><table border=\"0\" style=\"font-size:16px;display:block;width:100%\"><tbody><tr><td style=\"font-size:16px\"><table id=\"m_-37560143647318257890\" border=\"0\" width=\"100%\"><tbody><tr><td style=\"font-size:16px\"><div style=\"text-align:center;height:6.5em\"><table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td align=\"left\" style=\"font-size:16px\"><a href=\"http://www.madrimasd.org/notiweb\" title=\"noti+d\" target=\"_blank\"><img border=\"0\" width=\"492\" height=\"82\" src=\"assets/images/notiweb_logo.png\" class=\"CToWUd\"></a></td><td align=\"right\" style=\"font-size:16px\"><p style=\"font-size:0px\"><a href=\"http://www.madrid.org/\" target=\"_blank\"><img title=\"Comunidad de Madrid\" width=\"156\" height=\"78\" border=\"0\" alt=\"Comunidad de Madrid\" style=\"margin-top:25px;margin-left:1px;margin-right:1px\" src=\"assets/images/comunidad-de-madrid-bandera2.gif\" class=\"CToWUd\"></a></p></td></tr></tbody></table></div></td></tr><tr><td style=\"font-size:16px\"><div style=\"border-bottom:1px solid #b1b3b4;border-top:1px solid #b1b3b4\"><table width=\"100%\"><tbody><tr><td width=\"100%\" style=\"font-size:16px\"><div align=\"center\" style=\"display:inline-block;width:70%;padding-bottom:20px;font-family:arial;font-size:0.8em;padding:0.32em 0;color:#585858;text-transform:uppercase;text-align:left;letter-spacing:0.32em\">bolet\xEDn de noticias de i+d+<span style=\"text-transform:none\">i</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISSN 2530-531X<br><small>64437 suscriptores </small>&nbsp;&nbsp; ".concat(printDate(-1), " </div></td><td width=\"25%\" style=\"font-size:16px;margin-top:18px;margin-bottom:-4px;\"><a href=\"http://www.madrimasd.org/SistemaMadrimasd/ayuda/rss/default.asp\" target=\"_blank\"><img title=\"madri+d rss\" border=\"0\" align=\"right\" alt=\"madri+d rss\" style=\"margin-left:1px;margin-right:1px;margin-top:3px;margin-bottom:10px\" src=\"assets/images/rss.png\" class=\"CToWUd\"></a><a href=\"https://www.instagram.com/madrimasd/\" target=\"_blank\"><img title=\"madri+d Instagram\" border=\"0\" align=\"right\" alt=\"madri+d Instagram\" style=\"margin-left:1px;margin-right:1px;margin-top:3px;margin-bottom:10px\" src=\"assets/images/instagram.png\" class=\"CToWUd\"></a><a href=\"http://twitter.com/#!/madrimasd\" target=\"_blank\"><img title=\"madri+d Twitter\" border=\"0\" align=\"right\" alt=\"madri+d Twitter\" style=\"margin-left:1px;margin-right:1px;margin-top:3px;margin-bottom:10px\" src=\"assets/images/twitter.png\" class=\"CToWUd\"></a><a href=\"http://www.facebook.com/madrimasd\" target=\"_blank\"><img title=\"madri+d Facebook\" border=\"0\" alt=\"madri+d Facebook\" align=\"right\" style=\"margin-left:1px;margin-right:1px;margin-top:3px;margin-bottom:10px\" src=\"assets/images/facebook.png\" class=\"CToWUd\"></a></td></tr></tbody></table></div><div style=\"font-family:Helvetica,sans-serif;color:#585858;font-size:0.8em;margin:0.3em 0 1.1em 0\"></div></td></tr></tbody></table><br><table id=\"m_-37560143647318257891\" border=\"0\" width=\"100%\" cellpadding=\"0\" cellspacing=\"5\"><tbody><tr><td width=\"100%\" class=\"news\" style=\"font-size:16px;vertical-align:top;margin-top:30px;\"><div class=\"m_-3756014364731825789lista-exposiciones\"><div style=\"font-family:Helvetica,sans-serif;font-size:0.9em;text-align:justify\"><a href=\"https://www.madrimasd.org/notiweb/noticias/astronomos-captan-primera-imagen-un-agujero-negro\" style=\"color:#e0071e;font-family:Helvetica,sans-serif;font-size:1.3em;text-decoration:none\" target=\"_blank\">Astr\xF3nomos captan la primera imagen de un agujero negro </a><br>CSIC <br><br>Un agujero negro y su sombra han sido capturados en una imagen por primera vez, una haza\xF1a hist\xF3rica de una red internacional de radiotelescopios llamada Telescopio de Horizonte de Sucesos (EHT)<br><br><hr style=\"color:#e0071e\"><br></div><div class=\"m_-3756014364731825789lista-exposiciones\"><div style=\"font-family:Helvetica,sans-serif;font-size:0.9em;text-align:justify\"><a href=\"https://www.madrimasd.org/notiweb/noticias/edicion-genetica-repara-piel-mariposa-en-un-ensayo-ratones\" style=\"color:#e0071e;font-family:Helvetica,sans-serif;font-size:1.3em;text-decoration:none\" target=\"_blank\">La edici\xF3n gen\xE9tica repara piel de mariposa en un ensayo con ratones </a><br>El Pa\xEDs <br><br>La prueba usa la t\xE9cnica del CRISPR para eliminar la mutaci\xF3n maligna de las c\xE9lulas madre<br><br><hr style=\"color:#e0071e\"><br></div><div class=\"m_-3756014364731825789lista-exposiciones\"><div style=\"font-family:Helvetica,sans-serif;font-size:0.9em;text-align:justify\"><a href=\"https://www.madrimasd.org/notiweb/noticias/nuevos-avances-sobre-historia-natural-los-microbios-animales-que-habitan-nuestros-suelos\" style=\"color:#e0071e;font-family:Helvetica,sans-serif;font-size:1.3em;text-decoration:none\" target=\"_blank\">Nuevos avances sobre la historia natural de los microbios y animales que habitan nuestros suelos</a><br>URJC - mi+d <br><br>Un equipo internacional descubre los patrones globales que controlan la biodiversidad de los organismos del suelo a lo largo de millones de a\xF1os de desarrollo ecosist\xE9mico<br><br><hr style=\"color:#e0071e\"><br></div><div class=\"m_-3756014364731825789lista-exposiciones\"><div style=\"font-family:Helvetica,sans-serif;font-size:0.9em;text-align:justify\"><a href=\"https://www.madrimasd.org/notiweb/noticias/un-nuevo-proyecto-promete-redes-moviles-mas-solidas-agiles-un-coste-competitivo\" style=\"color:#e0071e;font-family:Helvetica,sans-serif;font-size:1.3em;text-decoration:none\" target=\"_blank\">Un nuevo proyecto promete redes m\xF3viles m\xE1s s\xF3lidas y \xE1giles a un coste competitivo </a><br>IMDEA Networks <br><br>Futuras arquitecturas de red mejoradas para integrar la inteligencia artificial <br><br><hr style=\"color:#e0071e\"><br></div><div class=\"m_-3756014364731825789lista-exposiciones\"><div style=\"font-family:Helvetica,sans-serif;font-size:0.9em;text-align:justify\"><a href=\"https://www.madrimasd.org/notiweb/noticias/enfermedad-renal-fue-octava-causa-muerte-en-espana-en-2016\" style=\"color:#e0071e;font-family:Helvetica,sans-serif;font-size:1.3em;text-decoration:none\" target=\"_blank\">La enfermedad renal fue la octava causa de muerte en Espa\xF1a en 2016 </a><br>UAM - mi+d <br><br>Un estudio reciente liderado desde la Universidad Aut\xF3noma de Madrid (UAM) pone de relieve el desconocido impacto de la enfermedad renal cr\xF3nica en Espa\xF1a<br><br><hr style=\"color:#e0071e\"><br></div><div class=\"m_-3756014364731825789lista-exposiciones\"><div style=\"font-family:Helvetica,sans-serif;font-size:0.9em;text-align:justify\"><a href=\"https://www.madrimasd.org/notiweb/noticias/un-estudio-juridico-analiza-gobernanza-economica-en-union-europea\" style=\"color:#e0071e;font-family:Helvetica,sans-serif;font-size:1.3em;text-decoration:none\" target=\"_blank\">Un estudio jur\xEDdico analiza la gobernanza econ\xF3mica en la Uni\xF3n Europea </a><br>UC3M - mi+d <br><br>Una investigaci\xF3n de un profesor de la Universidad Carlos III de Madrid (UC3M) analiza los problemas que la gobernanza econ\xF3mica de la Uni\xF3n Europea (UE) presenta en la actualidad<br><br><hr style=\"color:#e0071e\"><br></div><div class=\"m_-3756014364731825789lista-exposiciones\"><div style=\"font-family:Helvetica,sans-serif;font-size:0.9em;text-align:justify\"><a href=\"https://www.madrimasd.org/notiweb/noticias/ser-humano-mas-que-tierra-sera-quien-sufrira-cambio-climatico\" style=\"color:#e0071e;font-family:Helvetica,sans-serif;font-size:1.3em;text-decoration:none\" target=\"_blank\">El ser humano, m\xE1s que la Tierra, ser\xE1 quien \"sufrir\xE1\" el cambio clim\xE1tico </a><br>Agencia EFE Verde <br><br>Entrevista a Ana Mar\xEDa Alonso, Geoqu\xEDmica y Presidenta de la Sociedad Geol\xF3gica de Espa\xF1a<br><br><hr style=\"color:#e0071e\"><br></div><div class=\"m_-3756014364731825789lista-exposiciones\"><div style=\"font-family:Helvetica,sans-serif;font-size:0.9em;text-align:justify\"><a href=\"https://www.madrimasd.org/notiweb/noticias/las-matematicas-generan-10-pib-en-espana\" style=\"color:#e0071e;font-family:Helvetica,sans-serif;font-size:1.3em;text-decoration:none\" target=\"_blank\">Las matem\xE1ticas generan el 10 % del PIB en Espa\xF1a</a><br>SINC <br><br>En Espa\xF1a las matem\xE1ticas son directamente responsables de m\xE1s de un mill\xF3n de empleos -el 6 % del total-. Adem\xE1s, destaca que las profesiones 'intensivas' en esta materia, como especialistas en bases de datos, finanzas o dise\xF1adores de software, ser\xE1n las que m\xE1s crecer\xE1n en los pr\xF3ximos a\xF1os <br><br><hr style=\"color:#e0071e\"><br></div><div class=\"m_-3756014364731825789lista-exposiciones\"><div style=\"font-family:Helvetica,sans-serif;font-size:0.9em;text-align:justify\"><a href=\"https://www.madrimasd.org/notiweb/noticias/cuando-clima-tierra-cambio-radicalmente-hace-un-millon-anos\" style=\"color:#e0071e;font-family:Helvetica,sans-serif;font-size:1.3em;text-decoration:none\" target=\"_blank\">Cuando el clima de la Tierra cambi\xF3 radicalmente hace un mill\xF3n de a\xF1os </a><br>NCyT <br><br>Un cambio en la intensidad de la circulaci\xF3n oce\xE1nica global pudo ser responsable de la profunda alteraci\xF3n clim\xE1tica que desencaden\xF3 glaciaciones extremas hace un mill\xF3n de a\xF1os<br><br><hr style=\"color:#e0071e\"><br></div><div class=\"m_-3756014364731825789lista-exposiciones\"><div style=\"font-family:Helvetica,sans-serif;font-size:0.9em;text-align:justify\"><a href=\"http://www.madrimasd.org/blogs/emprendedores/2019/04/10/141371\" style=\"color:#e0071e;font-family:Helvetica,sans-serif;font-size:1.3em;text-decoration:none\" target=\"_blank\">Blog del d\xEDa: Business mentor madri+d, referencia del mentoring de calidad, certifica en Madrid a mentores y gestores de doce pa\xEDses europeos </a><br>madri+d <br><br>Expertos de toda Europa asistir\xE1n a la pr\xF3xima edici\xF3n de la certificaci\xF3n business mentor madri+d<br><br><hr style=\"color:#e0071e\"><br></div></div></div></div></div></div></div></div></div></div></div></td></tr><tr><td style=\"font-size:16px\"><div align=\"center\" style=\"font-family:arial;font-size:0.7em;padding:0.32em 0;color:#383838;text-transform:uppercase;text-align:center;letter-spacing:0.30em\"><br>\xBFQuiere acceder a todos nuestros contenidos?</div><table id=\"m_-37560143647318257895\" border=\"0\" width=\"100%\" cellpadding=\"5\" cellspacing=\"3\"><tbody><tr><td align=\"center\" width=\"16.6%\" style=\"font-size:16px;background-color:#e5e5e5;text-align:center;padding:10 0 10 0\"><a href=\"http://www.madrimasd.org/notiweb/noticias\" style=\"text-decoration:none;font-family:arial;font-size:0.6em;padding:0.32em 0;color:#383838;text-transform:uppercase;text-align:center;letter-spacing:0.30em\" target=\"_blank\" >m\xE1s noticias</a></td><td align=\"center\" width=\"16.6%\" style=\"font-size:16px;background-color:#e5e5e5;text-align:center;padding:10 0 10 0\"><a href=\"http://www.madrimasd.org/BuscadorMadrimasd/\" style=\"text-decoration:none;font-family:arial;font-size:0.6em;padding:0.32em 0;color:#383838;text-transform:uppercase;text-align:center;letter-spacing:0.30em\" target=\"_blank\">buscador</a></td><td align=\"center\" width=\"16.6%\" style=\"font-size:16px;background-color:#e5e5e5;text-align:center;padding:10 0 10 0\"><a href=\"http://www.madrimasd.org/contacto\" style=\"text-decoration:none;font-family:arial;font-size:0.6em;padding:0.32em 0;color:#383838;text-transform:uppercase;text-align:center;letter-spacing:0.30em\" target=\"_blank\">contacto</a></td><td align=\"center\" width=\"16.6%\" style=\"font-size:16px;background-color:#e5e5e5;text-align:center;padding:10 0 10 0\"><a href=\"http://www.madrimasd.org/NotiWeb/Baja/NewsLetterUserDown.aspx\" style=\"text-decoration:none;font-family:arial;font-size:0.6em;padding:0.32em 0;color:#383838;text-transform:uppercase;text-align:center;letter-spacing:0.30em\" target=\"_blank\">anular suscripci\xF3n </a></td><td align=\"center\" width=\"16.6%\" style=\"font-size:16px;background-color:#e5e5e5;text-align:center;padding:10 0 10 0\"><a href=\"http://www.madrimasd.org/notiweb/creditos-notiweb\" style=\"text-decoration:none;font-family:arial;font-size:0.6em;padding:0.32em 0;color:#383838;text-transform:uppercase;text-align:center;letter-spacing:0.30em\" target=\"_blank\">cr\xE9ditos</a></td></tr><tr><td colspan=\"5\" width=\"19%\" style=\"font-size:16px;text-align:center;padding:10 0 10 0\"><a href=\"http://www.madrimasd.org\" style=\"text-decoration:none;font-family:arial;font-size:0.9em;padding:0.32em 0;color:#e0071e;text-align:center;letter-spacing:0.30em\" target=\"_blank\">www.madrimasd.org</a></td></tr><tr><td colspan=\"5\" style=\"font-size:16px\"><div style=\"font-family:arial;font-size:0.7em;color:#585858;text-align:justify\">Los datos personales ser\xE1n tratados de conformidad con el nuevo Reglamento Europeo (UE) 2016/679 de Protecci\xF3n de Datos. La informaci\xF3n relativa a los destinatarios de los datos, la finalidad y las medidas de seguridad, as\xED como cualquier informaci\xF3n adicional relativa a la protecci\xF3n de sus datos personales podr\xE1 consultarla en el siguiente enlace <a href=\"http://www.madrid.org/protecciondedatos\" style=\"color:#e0071e;text-decoration:none\" target=\"_blank\">Protecci\xF3n de Datos</a>. Ante el responsable del tratamiento podr\xE1 ejercer, entre otros, sus derechos de acceso, rectificaci\xF3n, supresi\xF3n, oposici\xF3n y limitaci\xF3n de tratamiento.</div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>") },
-    date: printDate(-2),
-    categories: ["received"],
-    unread: true,
-}, {
-    id: 4,
-    from: "santander@seoze.com",
-    picture: "/images/email.png",
-    name: "Banco Santander",
-    issue: "Error de sesión",
-    description: "Lamentamos informarle que su última sesión al servicio Santander en línea no finalizó de manera correcta",
-    content: { html: banco_santander },
-    date: printDate(-4),
-    categories: ["received"],
-    unread: true,
-}, {
-    id: 5,
-    from: "evobanco@evobancos.io",
-    picture: "/images/email.png",
-    name: "EVO BANCO",
-    issue: "¡La web de EVO cada día más fácil!",
-    description: "Hoy estamos de celebración porque hemos inaugurado una nueva versión de nuestro portal web",
-    content: { html: banco_evo },
-    date: printDate(-8),
-    categories: ["received", "highlighted"],
-    unread: false,
-}, {
-    id: 6,
-    from: "ing@ing.es",
-    picture: "/images/email.png",
-    name: "ING",
-    issue: "Te recordamos los próximos cambios en la Cuenta NARANJA",
-    description: "Víctor, te recordamos los próximos cambios en la Cuenta NARANJA y otras cuentas de ahorro",
-    content: { html: banco_ing },
-    date: printDate(-10),
-    categories: ["received"],
-    unread: false,
-}, {
+        <p style="font-size: 15px; line-height: 1.6;">Estimados investigadores,</p>
+        
+        <p style="font-size: 15px; line-height: 1.6;">Nos es grato comunicarles que la <strong>Comisión Europea</strong> ha validado satisfactoriamente los hitos de la primera fase del proyecto.</p>
+        
+        <p style="font-size: 15px; line-height: 1.6; background-color: #eaf6fb; padding: 20px; border-left: 4px solid #0099d0; margin: 25px 0;">
+            ✅ Los fondos para la implementación de la <strong>plataforma de juegos de verificación</strong> ya están disponibles en su centro de coste.
+        </p>
+
+        <p style="font-size: 15px; line-height: 1.6;">Confiamos en que esta inyección de recursos permitirá acelerar el desarrollo del módulo de IA.</p>
+        
+        <p style="font-size: 15px; line-height: 1.6; margin-top: 30px;">Enhorabuena por el trabajo realizado.</p>
+    </div>
+
+    <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; display: flex; align-items: flex-end;">
+        <div>
+            <p style="margin: 0; font-weight: bold; color: #333;">Vicerrectorado de Investigación</p>
+            <p style="margin: 5px 0 0; font-size: 12px; color: #666;">Paseo Juan XXIII, 11 - 28040 Madrid</p>
+            <p style="margin: 2px 0 0; font-size: 12px; color: #0099d0;">www.upm.es</p>
+        </div>
+    </div>
+    <div style="margin-top: 20px; font-size: 10px; color: #999; text-align: justify; line-height: 1.3;">
+        Este mensaje y sus archivos adjuntos van dirigidos exclusivamente a su destinatario y pueden contener información confidencial sometida a secreto profesional. No está permitida su comunicación, reproducción o distribución sin la autorización expresa de la Universidad Politécnica de Madrid. Si usted no es el destinatario final, por favor elimínelo e infórmenos por esta vía.
+    </div>
+</div>`;
+
+
+const mailSent = {
     id: 7,
-    from: "confirmar-envio@amazon.es",
-    picture: "/images/email.png",
-    name: "Amazon.es",
-    issue: "Se ha enviado tu pedido de Amazon.es nº 4678-2011883-2797410 de 1 producto",
-    description: "Boletín de noticias de i+d+i ISSN 2530-531X 64437",
-    content: { html: '<div><img alt="Amazon.es" src="assets/images/800px-Amazon_logo.svg.png" style="border:0;width:115px" class="CToWUd"></a></td> <td class="m_4625667322731794711navigation"> <table align="right"> <tbody> <tr> <td> <a href="https://www.amazon.es" target="_blank">Mis pedidos</a> </td> <td> <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span> </td> <td> <a href="https://www.amazon.es" target="_blank" >Mi cuenta</a> </td> <td> <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span> </td> <td> <a class="m_4625667322731794711last" href="https://www.amazon.es" target="_blank" ><span class="il">Amazon</span>.es</a> </td> </tr> </tbody> </table> </td> </tr> <tr> <td class="m_4625667322731794711title"> <h2>Confirmación del envío</h2> Pedido nº #<a href="https://www.amazon.es/Retekess-Retroiluminado-Num%C3%A9rico-Laboratorio-Edificio/dp/B07CYNLF96" target="_blank">4678-2011883-2797410</a> </td> </tr> </tbody> </table> </td> </tr> <tr> <td> <br/><table cellpadding="0"> <tbody> <tr></tr><br/><tr> <td> <span class="m_4625667322731794711heading">Hola:</span> <p> Te informamos de que ya hemos enviado tus productos. Dado que este pedido se encuentra en proceso de envío, ya no podrás realizar ninguna modificación. <br><br>Tu pedido está en camino, y, por lo tanto, ya no se puede modificar. Si deseas devolver un producto de tu pedido o gestionar otros productos, visita <a href="https://www.amazon.es" target="_blank">Mis pedidos</a> en <span class="il">Amazon</span>.es </p> </td> </tr> </tbody> </table> </td> </tr> <tr> <td colspan="2"> <table id="m_4625667322731794711criticalInfo" cellpadding="0"> <tbody> <tr class="m_4625667322731794711detailsContent"> <td> <p> <span class="m_4625667322731794711uniqueSpan"> Entrega: </span> <br> <b style="color:#009900"> lunes, diciembre 14 </b> </p> <a href="https://www.amazon.es"> <img src="assets/images/imagen_cerradura.jpg" width="115" height="115" alt="Retekess T-AC04 Control de Acceso Teclado Acceso Puerta Teclado Retroiluminado Numérico IP68 Código PIN" border="0" class="CToWUd"> </a> </td> </tr> <tr align="left" style="padding:0;display:block;line-height:16px"> <td align="left"> <span style="font:13px Arial,sans-serif;text-decoration:none;color:#868686"> <a href="https://www.amazon.es/Retekess-Retroiluminado-Num%C3%A9rico-Laboratorio-Edificio/dp/B07CYNLF96" target="_blank">Retekess T-AC04 Control de Acceso...</a> </span> </td> </tr> <tr align="left" style="padding:0;display:block;line-height:16px"> <td valign="middle" align="left"> <span style="font:13px Arial,sans-serif;text-decoration:none;color:#868686;vertical-align:3px"> 62,77 US$ </span> <span style="vertical-align:0px"></span> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table></td> </tr> </tbody> </table> </td> </tr> <tr> <td> <table id="m_4625667322731794711legalCopy"> <tbody> <tr> <td> <span> <br> <strong>Instrucciones sobre el derecho de cancelación</strong><br> <br> <strong>Derecho de cancelación:</strong><br> <br> Tienes el derecho a desistir este contrato sin necesidad de justificación en un plazo de 14 días a partir de la fecha en que asumes la posesión material de esos bienes (o del último de esos bienes, en el caso de que el contrato se refiera a la entrega de productos en varios envíos parciales o varios lotes o piezas) o a partir de la fecha de formalización del contrato en el caso de contenido digital no proporcionados en un medio tangible (por ejemplo, CD o DVD).<br> <br> Para ejercer el derecho de cancelación, debes informarnos de tu decisión de cancelación de tu pedido. Dirige tu solicitud a: <ul> <li><span class="il">Amazon</span> EU S.A.R.L, 38 avenue John F. Kennedy, L-1855 Luxembourg, Gran Ducado de Luxemburgo para los productos vendidos y enviados por <span class="il">Amazon</span>; o a </li> <li><span class="il">Amazon</span> Services Europe Sarl, 38 avenue John F. Kennedy, L-1855 Luxembourg, Gran Ducado de Luxemburgo para los productos vendidos por un vendedor de Marketplace y gestionados por <span class="il">Amazon</span>. </li> </ul> Podrás notificarnos la cancelación a través de nuestro <a href="https://www.amazon.es" target="_blank">Centro de devoluciones online</a> ; contactándonos <a href="https://www.amazon.es" target="_blank" >Servicio de Atención al Cliente</a>; o completando este <a href="https://www.amazon.es" target="_blank" ">Formulario estándar</a> y enviándonoslo por correo. <br> <br> Para cumplir el plazo de desistimiento, basta con enviar tu comunicado sobre el ejercicio del derecho de cancelación antes de que venza el plazo de desistimiento y debes devolver los productos a través de nuestro Centro de devoluciones online en el plazo definido a continuación. <br> Para obtener más información acerca del ámbito de aplicación, el contenido y las instrucciones del ejercicio, ponte en contacto con nuestro servicio de atención al cliente. <br> <br> <strong>Efectos de la cancelación:</strong><br> <br> En caso de desistimiento por tu parte, te reembolsaremos todos los pagos que hayamos recibido de la mercancía vendida y te reembolsaremos también los gastos de envío de la modalidad de entrega ordinaria menos costosa que se ofrezca. Este reembolso se realizará sin ninguna demora indebida y, salvo en las situaciones que se describen a continuación, un máximo de 14 días a partir de la fecha en la que recibimos tu comunicado sobre la cancelación de este contrato. Para este reembolso utilizaremos el mismo medio de pago empleado por ti en la transacción inicial, a no ser que hayas convenido expresamente lo contrario. En cualquier caso, no incurrirá en ningún gasto como consecuencia del reembolso. Nos reservamos el derecho a retener el reembolso hasta haber recibido los bienes o hasta que hayas presentado una prueba de la devolución de los bienes, según la condición que se cumpla primero. <br> <br>Debes enviar la mercancía sin ninguna demora indebida y, en cualquier caso, a más tardar en el plazo de 14 días a partir de la fecha en que nos comuniques la cancelación de este contrato a través de nuestro <a href="https://www.amazon.es" target="_blank" >Centro de devoluciones online</a> .<br> <br>Para cumplir el plazo, basta con enviar los productos antes de que el plazo de 14 días haya caducado. Tendrás que asumir el coste normal de devolución de los bienes si la mercancía entregada corresponde a los productos del pedido y si el precio de los productos devueltos no supera un importe de 40 euros, o si, en el caso en que el precio de los productos es mayor, en la fecha de la cancelación, aún no ha realizado el pago correspondiente o el pago parcial acordado. De lo contrario, la devolución de la mercancía es gratuita. Solo tendrás que pagar el deterioro del valor de los bienes, en caso de que el importe de la mercancía disminuya debido a la manipulación de los productos de forma que vaya más allá de lo necesario para establecer la naturaleza, las características y el funcionamiento de los bienes. <br> <br> <strong>Excepciones al derecho de la cancelación:</strong><br> <br> El derecho de desistimiento no existe o decae y, en su caso, en el caso de los contratos relativos a: <br> <ul><li> la entrega de bienes que no sean aptos para ser devueltos por razones de protección de la salud o de higiene y que hayan sido desprecintados por usted tras la entrega o, que, debido a su naturaleza, después de su entrega, se hayan mezclado de forma indisociable con otros bienes; </li><li> el suministro de grabaciones sonoras o de vídeo precintadas o de programas informáticos precintados que hayan sido desprecintados por usted después de la entrega; </li><li> el suministro de bienes confeccionados conforme a las especificaciones del cliente o claramente personalizados para necesidades personales. </li><li> el suministro de bienes que puedan deteriorarse o caducar con rapidez; </li><li> un servicio que haya sido completamente ejecutado por <span class="il">Amazon</span> (por ejemplo, el uso de MP3 de <span class="il">Amazon</span> Service) y que has reconocido y aceptado expresamente antes de realizar el pedido que podemos empezar a entregar el servicio, y que el derecho de cancelación dejaría de ser válido una vez que el contrato hubiera sido completado; </li><li> el suministro de prensa diaria, publicaciones periódicas o revistas, con la excepción de los contratos de suscripción; y </li><li> el suministro de bebidas alcohólicas cuyo precio se ha acordado en la conclusión del contrato de venta, que solo puede entregarse después de 30 días y cuyo valor real depende de fluctuaciones del mercado que no podemos controlar.  <br> <br><strong>Fin de las instrucciones sobre el derecho de cancelación</strong><br> <br> Ten en cuenta lo siguiente: Si adquieres un dispositivo subvencionado junto con tu nuevo contrato de servicios o la actualización de tu contrato de servicios, solo puedes cancelar la <span class="il">compra</span> y el contrato de servicios de forma conjunta. Si cancelas el contrato de servicios, simultáneamente declaras la cancelación del contrato de <span class="il">compra</span> y viceversa.<br> ______________________________<wbr>______________________________<wbr>__<br> <br> <strong>Nuestra garantía de devolución voluntaria:</strong><br> <br> Sin perjuicio de lo dispuesto en el citado derecho de cancelación, puedes devolver todos los productos que nos has comprado de <a href="https://www.amazon.es" target="_blank" ><span class="il">Amazon</span>.es</a> en un plazo de 30 días a partir de la fecha de recepción de los productos, si estos están íntegros, no han sufrido daños y están sin usar. Para los medios de datos sellados o retractilados, (por ejemplo, CDs, casettes de audio, vídeos VHS, DVDs, PC, videojuegos y software) esto significa que solo aceptamos las devoluciones de productos cuyo embalaje o sello no se han abierto. Una vez transcurrido el plazo de devolución, en el caso de defectos en tus productos, consulta la información sobre garantías. <br> <br> Para más información sobre pedidos en <a href="http://www.amazon.es" target="_blank" >www.<span class="il">amazon</span>.es</a> así como sobre nuestra garantía de devolución voluntaria, consulta:<br> <a href="https://www.amazon.es" target="_blank" >Páginas de ayuda en inglés</a><br> <br> Para ver nuestros Términos y Condiciones generales, consulta:<br> <br> <span class="il">Amazon</span> EU, Société à responsabilité limitée, 38 avenue John F. Kennedy, L-1855 Luxembourg. Capital social: EUR 125.000; Número de Registro en Luxemburgo: B 101818; Número de licencia mercantil: 134248; Número de Registro de IVA en Luxemburgo: LU 20260743. <br> <br> Nota: este correo ha sido enviado desde una dirección de e-mail que no acepta correos entrantes. Por favor, no respondas a este e-mail.<br>  </li></ul></span></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </div>' },
-    date: "12-12-2020",
-    categories: ["received"],
-    unread: false,
+    from: "arnaldo.gomez@upm.es",
+    name: "Arnaldo",
+    issue: "Volcado de logs",
+    description: "Hola, He realizado el volcado de logs...",
     attachment: {
-        title: "Invoice #4678.pdf",
-        url: "assets/images/Invoice4678.pdf",
+        title: "datos_bulos.zip",
+        url: "#",
     },
-}, {
-    id: 8,
-    from: "fabagnale@cerrajerosvl.es",
-    picture: "/images/email.png",
-    name: "Francisco Abagnale",
-    issue: "Consulta cerradura",
-    description: "Hola Víctor. He estado mirando aquello que ...",
-    content: { html: "Hola Víctor. <br/><br/>He estado mirando aquello que me pediste y creo que he encontrado la solución idónea. Mira esta cerradura: <a target='_blank' href='https://www.amazon.es/Retekess-Retroiluminado-Num%C3%A9rico-Laboratorio-Edificio/dp/B07CYNLF96'>\"Retekess T-AC04 Control de Acceso Teclado Acceso Puerta Teclado Retroiluminado Numérico IP68 Código PIN\"</a>, tiene todo lo que querías y no es muy cara.<br/><br/>Un abrazo!" },
-    date: "11-12-2020",
-    categories: ["received"],
-    unread: false,
-}, {
-    id: 9,
-    from: "marialustig@gmail.com",
-    picture: "/images/email.png",
-    name: "María Lustig",
-    issue: "RE: Copia de seguridad teléfono móvil",
-    description: "Ok, estupendo. En cuanto regrese del hospital...",
-    content: { html: "Genial!\n    <br/>\n    <br/>\n    ".concat(re, "\n    \n    ") },
-    date: "5-12-2020",
-    unread: false,
-    categories: ["received"],
-    attachment: {
-        title: "CopiaSegMovil.zip",
-        url: "http://vishub.org/pictures/18977.jpg",
+    content: {
+        html: reBody
     },
+    date: printDate(-6),
+    categories: ["sent"],
+    unread: false,
 }
-]
+
+export const emails = [
+    {
+        id: 1,
+        from: "ip.endgame@upm.es",
+        name: "Investigador Principal",
+        issue: "RE: Volcado de datos ENDGAME",
+        description: "Perfecto, Arnaldo. Ya he recibido el enlace...",
+        picture: "https://www.upm.es/gsfs/SFS24596",
+        content: {
+            body: [
+                "Perfecto, Arnaldo. Ya he recibido el enlace. Mañana mismo empezaremos con la fase de gamificación para detectar los bulos de la red.",
+                "Buen trabajo."
+            ],
+            response: {
+                ...mailSent
+            }
+        },
+        date: printDate(0),
+        unread: true,
+        attachment: {
+            title: "plan_de_gamificacion.pdf",
+            url: "#",
+        },
+        categories: [
+            "received",
+            "highlighted",
+            "important",
+        ],
+    },
+    {
+        id: 2,
+        picture: "https://files.maldita.es/maldita/system/maldita-logo.webp",
+        from: "alertas@maldita.es",
+        name: "Maldita.es",
+        issue: "Alerta: Campaña detectada en X",
+        description: "Hemos encontrado un rastro de bots coordinados...",
+        content: {
+            html: malditaHtml
+        },
+        date: printDate(-2),
+        categories: ["received"],
+        unread: true,
+    },
+    {
+        id: 3,
+        from: "rectorado@upm.es",
+        name: "Rectorado UPM",
+        issue: "Fondos Proyecto ENDGAME",
+        description: "Confirmación de fondos de la Comisión Europea...",
+        picture: "https://www.upm.es/gsfs/SFS24596",
+        content: {
+            html: upmHtml
+        },
+        date: printDate(-3),
+        categories: ["received", "important"],
+        unread: false,
+    },
+    {
+        id: 4,
+        from: "comite.etico@upm.es",
+        name: "Comité Ético UPM",
+        issue: "Revisión Algoritmo Detección",
+        description: "Se requiere documentación adicional sobre IA...",
+        content: {
+            img: "https://www.upm.es/sfs/Rectorado/Vicerrectorado%20de%20Investigacion/Images/banner_etica.jpg",
+            body: [
+                "Atención Investigador Principal,",
+                "Para cumplir con los requisitos de Horizonte Europa, necesitamos que adjunten el informe de impacto ético sobre el tratamiento de datos de los alumnos.",
+                "Especialmente en lo referente al módulo de aprendizaje automático que clasifica las respuestas en los juegos.",
+                "Gracias."
+            ]
+        },
+        date: printDate(-4),
+        categories: ["received", "postponed"],
+        unread: false,
+    },
+    {
+        id: 5,
+        from: "info@it-security.com",
+        name: "IT Security Conference",
+        issue: "Confirmación de envío",
+        description: "Tu artículo 'Gamifying Truth' ha sido enviado...",
+        content: {
+            img: "https://eventos.upm.es/_files/_event/_127786/_header_img/_189391.png",
+            body: [
+                "Estimado autor,",
+                "Confirmamos la recepción de su borrador titulado 'Gamifying Truth: A new approach to media literacy' para el congreso internacional.",
+                "El comité científico revisará el documento y recibirá una respuesta antes del próximo mes.",
+                "Gracias por su contribución.",
+                "Atentamente, IT Security Conference team",
+                "www.it-security-conference.com"
+            ]
+        },
+        date: printDate(-1),
+        categories: ["received"],
+        unread: false,
+    },
+    {
+        id: 6,
+        from: "investigador@upm.es",
+        name: "notas ENDGAME",
+        issue: "[BORRADOR] Notas metodología",
+        description: "Notas sobre cómo puntuar a los alumnos...",
+        content: {
+            body: [
+                "IDEAS PARA EL JUEGO:",
+                "- Añadir 100 puntos extra si el alumno detecta el deepfake en menos de 10 segundos.",
+                "- Si fallan tres veces seguidas, mostrar el consejo de verificación de Maldita.es.",
+                "- ¿Podemos integrar el login de la UPM directamente?"
+            ]
+        },
+        date: printDate(-5),
+        categories: ["draft"],
+        unread: false,
+    },
+    mailSent
+];
 
 export const chats = [{
-    name: "María Lustig",
-    msg: "Avísame cuando salgas de casa",
-    photo: "/images/avatar.png",
-    status: "offline",
+    name: "Investigador principal",
+    msg: "¿Has podido abrir el .zip con la clave?",
+    photo: "https://www.upm.es/gsfs/SFS24596",
+    status: "online",
 }, {
-    name: "Francisco",
-    msg: "¿Te fué bien con la cerradura?",
-    photo: "/images/avatar.png",
+    name: "Maldita Lab",
+    msg: "El servidor de verificación está listo.",
     status: "offline",
-}, {
-    name: "Alex Lustig",
-    msg: "¡Feliz cumpleaños papá!",
-    photo: "/images/avatar.png",
-    status: "offline",
+    photo: "https://files.maldita.es/maldita/system/maldita-logo.webp",
 }];

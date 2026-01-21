@@ -5,8 +5,8 @@ export default function Categories({ selectedCategory, getUnreadEmailsFromCatego
     const categoryData = [
         { id: MAIL_CATEGORIES.RECEIVED, title: I18n.getTrans("i.categories.received"), icon: "/images/inbox.png" },
         { id: MAIL_CATEGORIES.HIGHLIGHTED, title: I18n.getTrans("i.categories.highlighted"), icon: "/images/star.png" },
-        { id: MAIL_CATEGORIES.IMPORTANT, title: I18n.getTrans("i.categories.important"), icon: "/images/clock.png" },
-        { id: MAIL_CATEGORIES.POSTPONED, title: I18n.getTrans("i.categories.postponed"), icon: "/images/important.png" },
+        { id: MAIL_CATEGORIES.IMPORTANT, title: I18n.getTrans("i.categories.important"), icon: "/images/important.png" },
+        { id: MAIL_CATEGORIES.POSTPONED, title: I18n.getTrans("i.categories.postponed"), icon: "/images/clock.png" },
         { id: MAIL_CATEGORIES.SENT, title: I18n.getTrans("i.categories.sent"), icon: "/images/sent.png" },
         { id: MAIL_CATEGORIES.DRAFT, title: I18n.getTrans("i.categories.draft"), icon: "/images/document.png" }
     ];

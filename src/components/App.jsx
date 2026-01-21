@@ -121,9 +121,9 @@ export default function App() {
             ce.name === storedEmail.name &&
             ce.issue === storedEmail.issue &&
             ce.description === storedEmail.description &&
-            ce.content === storedEmail.content &&
             ce.date === storedEmail.date &&
             ce.picture === storedEmail.picture &&
+            JSON.stringify(ce.content) === JSON.stringify(storedEmail.content) &&
             JSON.stringify(ce.attachment) === JSON.stringify(storedEmail.attachment) &&
             JSON.stringify(cleanCats(ce.categories)) === JSON.stringify(cleanCats(storedEmail.categories));
 
