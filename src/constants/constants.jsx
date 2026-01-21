@@ -4,9 +4,9 @@ export const DEFAULT_APP_SETTINGS = {
   chats,
   hint: undefined,
   errorMessage: undefined,
-  name: "name",
-  username: "username",
-  domain: "domain.com",
+  name: "Arnaldo",
+  username: "arnaldo.gomez",
+  domain: "upm.es",
   photo: "/images/avatar.png",
 };
 
