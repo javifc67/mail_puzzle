@@ -68,6 +68,8 @@ const upmHtml = `<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, s
 const mailSent = {
     id: 7,
     from: "arnaldo.gomez@upm.es",
+    to: "ip.endgame@upm.es",
+    picture: "/images/avatar.png",
     name: "Arnaldo",
     issue: "Volcado de logs",
     description: "Hola, He realizado el volcado de logs...",
@@ -203,7 +205,7 @@ export const emails = [
 
 export const chats = [{
     name: "Investigador principal",
-    msg: "¿Has podido abrir el .zip con la clave?",
+    msg: "¿Has podido abrir el .pdf con la clave?",
     photo: "https://www.upm.es/gsfs/SFS24596",
     status: "online",
 }, {

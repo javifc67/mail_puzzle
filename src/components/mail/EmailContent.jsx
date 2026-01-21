@@ -45,7 +45,7 @@ export default function EmailContent({ config, email, highlightEmail, I18n }) {
                                 <h2>{email.name}</h2><span>&#60;{email.from}&#62;</span>
                             </div>
                             <div className="recipient">
-                                {I18n.getTrans("i.to")} {config.username + "@" + config.domain}
+                                {email.to ? <span>{I18n.getTrans("i.to")} {email.to}</span> : <span>{I18n.getTrans("i.to")} {config.username + "@" + config.domain}</span>}
                             </div>
                         </div>
                     </div>
